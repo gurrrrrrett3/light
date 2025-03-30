@@ -69,4 +69,5 @@ already. These tools have contributed and continue to contribute to The Roblox N
 be possible without time and work from a lot of awesome people. I'd also like to personally thank the people below, as
 well as anyone else who contributes to light:
 
-- <a href="https://github.com/alicesaidhi/" target="_blank">Alice</a>: help with bitfield constant lookups
+- <a href="https://github.com/alicesaidhi/" target="_blank">Alice</a>: help with og bitfield constant lookups
+- <a href="https://github.com/lewisakura/" target="_blank">Lewi</a>: help w docs :pray:
