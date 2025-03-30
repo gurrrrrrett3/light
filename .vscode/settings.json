@@ -1,0 +1,8 @@
+{
+   "markdownlint.config": {
+      // Inline HTML
+      "MD033": false,
+      // Multiple top level headers
+      "MD025": false
+   }
+}

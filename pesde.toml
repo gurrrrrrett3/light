@@ -1,0 +1,15 @@
+name = "hardlyardi/light"
+version = "0.1.0"
+description = "A remote event wrapper for roblox"
+authors = ["hardlyardi"]
+repository = "https://github.com/hardlyardi/light"
+license = "MIT"
+private = true
+
+workspace_members = ["pkgs/*"]
+
+[target]
+environment = "roblox"
+
+[indices]
+default = "https://github.com/pesde-pkg/index"

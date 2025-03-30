@@ -1,0 +1,198 @@
+site_name: Holy Light
+site_description: >-
+
+site_url: https://ardi.gg/light/
+
+repo_name: hardlyardi/light
+repo_url: https://github.com/hardlyardi/light
+
+theme:
+  name: material
+
+  logo: assets/images/light.svg
+  favicon: assets/images/light.svg
+
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.instant.prefetch
+    - navigation.instant.preview
+
+    - navigation.indexes
+
+    - navigation.tabs
+
+    - navigation.path
+
+    - navigation.top
+
+    - navigation.footer
+
+    - search.suggest
+    - search.highlight
+    - search.share
+
+    - announce.dismiss
+
+    - content.tooltips
+
+    - content.action.edit
+    - content.action.view
+
+    - content.code.copy
+    - content.code.annotate
+    - content.code.select
+
+    - content.footnote.tooltips
+
+  icon:
+    repo: fontawesome/brands/github
+    tag:
+      server: material/server-network
+      client: material/account-network-outline
+      shared: material/script-text-outline
+      sync: material/sync
+      async: material/clock
+      errors: material/alert-circle-outline
+      experimental: material/flask
+      internal: material/eye-off
+
+extra:
+  tags:
+    Server: server
+    Client: client
+    Shared: shared
+    Synchronous: sync
+    Yielding: async
+    Errors: errors
+    Experimental: experimental
+    Internal: internal
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+
+  - pymdownx.betterem
+  - pymdownx.details
+
+  - pymdownx.highlight:
+      use_pygments: true
+      linenums: true
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+
+  - pymdownx.snippets:
+      auto_append:
+        - docs/includes/abbreviations.md
+  - pymdownx.superfences
+
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+  - tags:
+      tags_allowed:
+        - Server
+        - Client
+        - Shared
+        - Synchronous
+        - Yielding
+        - Errors
+        - Experimental
+        - Internal
+
+nav:
+  - Home: index.md
+  - Quick Start / Get Started:
+      - Install: quick-start/installation.md
+      - Messages: quick-start/messages.md
+  - API Docs:
+      - API Documentation: api/index.md
+      - Init: api/init.md
+      - Step Replication: api/step_replication.md
+      - Messages:
+          - Creation:
+              - container: api/network/messages/creation/container.md
+              - message: api/network/messages/creation/message.md
+          - Sending:
+              - send: api/network/messages/sending/send.md
+              - send_unreliably: api/network/messages/sending/send_unreliably.md
+              - broadcast: api/network/messages/sending/broadcast.md
+              - broadcast_to_all: api/network/messages/sending/broadcast_to_all.md
+              - broadcast_to_all_except: api/network/messages/sending/broadcast_to_all_except.md
+              - send_to_all: api/network/messages/sending/send_to_all.md
+              - send_unreliably_to_all: api/network/messages/sending/send_unreliably_to_all.md
+              - send_to_all_except: api/network/messages/sending/send_to_all_except.md
+              - send_unreliably_to_all_except: api/network/messages/sending/send_unreliably_to_all_except.md
+          - Listening:
+              - connect: api/network/messages/listening/connect.md
+              - disconnect: api/network/messages/listening/disconnect.md
+              - connect_sync: api/network/messages/listening/connect_sync.md
+      - Datatypes:
+          - Datatypes: api/constants/datatypes/index.md
+          - Numbers:
+              - Unsigned Integers: api/constants/datatypes/numbers/uints.md
+              - Signed Integers: api/constants/datatypes/numbers/ints.md
+              - Floating Points: api/constants/datatypes/numbers/floats.md
+          - Generic Datatypes:
+              - Tables:
+                  - Array: api/constants/datatypes/generics/arr.md
+                  - Map: api/constants/datatypes/generics/map.md
+                  - Struct: api/constants/datatypes/generics/struct.md
+              - Vect: api/constants/datatypes/generics/vect.md
+              - Vect2: api/constants/datatypes/generics/vect2.md
+              - Vector2: api/constants/datatypes/generics/vector2.md
+              - Literal: api/constants/datatypes/generics/literal.md
+              - Enums: api/constants/datatypes/generics/enums.md
+              - Optional: api/constants/datatypes/generics/optional.md
+              - String: api/constants/datatypes/generics/str.md
+              - String Pointer: api/constants/datatypes/generics/strptr.md
+              - Range: api/constants/datatypes/generics/range.md
+              - Cached Datatypes: api/constants/datatypes/generics/cached.md
+              - Computed: api/constants/datatypes/generics/computed.md
+              - Buffer: api/constants/datatypes/generics/buff.md
+          - Bool: api/constants/datatypes/bool.md
+          - Unkown: api/constants/datatypes/unknown.md
+          - Instance: api/constants/datatypes/instance.md
+  - Performance:
+      - Performance: blog/performance/index.md
+  - Internals Blog:
+      - Internals Blog: blog/internals/index.md
+      - Holy:
+          - Holy: blog/internals/holy/index.md
+          - Cached Closures: blog/internals/holy/cached_closures.md
+          - Special Cased Generics: blog/internals/holy/special_cased_generics.md
+          - Reallocation Merging: blog/internals/holy/reallocation_merging.md
+      - Message Sync: blog/internals/message_sync.md
+      - Unreliable Fragmentation: blog/internals/unreliable_fragmentation.md
+      - Replication Batch: blog/internals/replication_batch.md
+      - Dynamic Streams: blog/internals/dynamic_streams.md
+      - String Pointers: blog/internals/string_pointers.md
+      - Bitpacks: blog/internals/bitpacks.md

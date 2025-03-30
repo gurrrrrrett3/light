@@ -1,0 +1,72 @@
+# Home
+
+Light is a *light*weight, secure, modern networking library for roblox. Read below, or [get started](quick-start/installation.md).
+
+## What Light does
+
+- Batching, to pack all of your data efficiently together each frame.
+
+- Serializes your data into buffers statically, so your types will be fully validated.
+
+- Let you broadcast large unreliable messages for tasks such as character replication or neck cframes.
+
+- Works with no plugin. Light can be downloaded and used out-of-the-box.
+
+- Handles all the RemoteEvent instances for you reliably.
+
+## What Light doesn't
+
+- Serve as a drop-in replacement for other tools, such as RemoteEvents,
+<a href="https://github.com/ffrostfall/ByteNet" target="_blank">ByteNet</a>,
+or <a href="https://github.com/1Axen/blink" target="_blank">Blink</a>.
+Light is similar to these, but will require some work to migrate to/from.
+
+- Secure your messages for you. Static serialization ensures you get the types you expect, but the data can still be manipulated by exploiters.
+
+- Provide a built-in signal implementation.
+Light messages can be connected or disconnected with a single callback, and no more. For convenience, a thread reuse
+implementation is packaged out-of-the-box with [`light.connect()`](./api/network/messages/listening/connect.md)
+[why?](#q-why-only-allow-one-callback)
+
+## FAQ / Q&A
+
+### Q: Does batching add extra delays or overhead to my networking?
+
+No. Roblox does batching on its own, light does batching to group messages together and optimize bandwidth
+
+### Q: Is event order the same as roblox?
+
+No. Messages will be ordered per-message. This means that in an environment where you:
+
+```luau
+send(message_a)
+send(message_b)
+send(message_a)
+```
+
+The other side will recieve message_a, then message_a, followed by message_b.
+
+### Q: Why only allow one callback?
+
+I personally don't use multiple callbacks for events. If you do, you can make your callback spawn a signal
+implementation or BindableEvent. The way I see it, there's no reason for me to include bloat like a signal in the base
+library. If you're interested in event profiling, check out the docs for
+[`#!luau light.disconnect()`](./api/network/messages/listening/disconnect.md). It has a pretty good example of a
+"template" event profiler.
+
+### Q: Where can I find holy?
+
+Holy is available on [its github repo](https://github.com/hardlyardi/holy).
+
+## Special Thanks
+
+Special thanks to
+<a href="https://github.com/1Axen/blink" target="_blank">Blink</a>,
+<a href="https://github.com/ffrostfall/ByteNet" target="_blank">ByteNet</a>,
+<a href="https://github.com/Data-Oriented-House/Squash" target="_blank">Squash</a>,
+and the people behind them. All of the above tools are awesome and you should absolutely check them out if you haven't
+already. These tools have contributed and continue to contribute to The Roblox Networking Ecosystem, and light would not
+be possible without time and work from a lot of awesome people. I'd also like to personally thank the people below, as
+well as anyone else who contributes to light:
+
+- <a href="https://github.com/alicesaidhi/" target="_blank">Alice</a>: help with bitfield constant lookups
