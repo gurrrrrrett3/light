@@ -3,7 +3,7 @@
 Caching closures is a basic optimization
 [Holy](https://github.com/hardlyardi/holy) and
 [Squash](https://github.com/Data-Oriented-House/Squash)
-do to "generic" [Datatypes](../../../api/constants/datatypes/index.md)
+to do "generic" [Datatypes](../../../api/constants/datatypes/index.md)
 ([Datatypes](../../../api/constants/datatypes/index.md) which take in a parameter). It works generally by storing an
 "input" index based on parameters, and saving the result shape ID. This caching system is important to make sure memory
 usage stays low (by not creating new serialization/deserialization functions), and to prevent ser/de IDs from getting
