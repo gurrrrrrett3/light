@@ -26,14 +26,15 @@ This call can yield the current thread.
 
 ### <span class="md-tag md-tag-icon md-tag--errors">Errors</span> { id="errors" data-toc-label="Errors" }
 
-This call can error under specific circumstances.
+This call can error under specific circumstances. This tag does not include errors from issues like passing in the wrong
+type.
 
 ### <span class="md-tag md-tag-icon md-tag--experimental">Experimental</span> { id="tag-experimental" data-toc-label="Experimental" }
 
-This part of the API is considered experimental, and may change or be removed at any point.
+This part of the API is considered experimental for now, and may change or be removed at any point.
 
 ### <span class="md-tag md-tag-icon md-tag--internal">Internal</span> { id="tag-internal" data-toc-label="Internal" }
 
-The internals of Light are exposed in user-facing API. However, they should never be necessary for an ordinary user.
-Instead, they are present for people developing "extensions", or light itself. Internal APIs are subject to more
+The internals of Light are exposed in some user-facing APIs. However, they should never be necessary for an ordinary
+user. Instead, they are present for people developing "extensions", or light itself. Internal APIs are subject to more
 frequent breaking changes.
