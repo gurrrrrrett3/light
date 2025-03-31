@@ -13,26 +13,19 @@ theme:
   favicon: assets/images/light.svg
 
   palette:
-    - media: "(prefers-color-scheme)"
-      toggle:
-        icon: material/brightness-auto
-        name: Switch to light mode
-
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
+    - scheme: default
       primary: custom
       accent: custom
       toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
+        icon: material/lightbulb
+        name: Lights are on
 
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+    - scheme: slate
       primary: custom
       accent: custom
       toggle:
-        icon: material/brightness-4
-        name: Switch to system preference
+        icon: material/lightbulb-outline
+        name: Lights are off
 
   features:
     - navigation.instant
