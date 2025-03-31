@@ -3,7 +3,7 @@ hide:
   - navigation
 ---
 
-# Home
+# :3c
 
 Light is a *light*weight, secure, and modern remote wrapper for roblox. Read below, or [get started](quick-start/index.md).
 
