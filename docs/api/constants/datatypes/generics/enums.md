@@ -1,28 +1,34 @@
 # Enums
 
-An enum represents a set of possible values. Light's enums are generally only available in the
-[Luau Inference Engine V2](https://devforum.roblox.com/t/new-type-solver-beta/3155804). Because of limitations with
-string types, to get full type info from some enums you will need to [typecast](https://luau.org/typecheck#type-casts)
-into a [string singleton type](https://luau.org/typecheck#singleton-types-aka-literal-types).
+An enum represents a set of possible values. Because of limitations with string types, to get full type info from some
+enums you will need to [typecast](https://luau.org/typecheck#type-casts) into a
+[string singleton type](https://luau.org/typecheck#singleton-types-aka-literal-types).
 
 ## `#!luau function enum` <span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--shared">Shared</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>
 
 ```luau
 function enum<Units>(
-   units: { Units } & { string }
+   units: { Units }
 ): Datatype<Units>
 ```
 
+!!!info "Light's tagged enums are generally only available in the [Luau Inference Engine V2](https://devforum.roblox.com/t/new-type-solver-beta/3155804). Unit enums do not have this restriction."
+
 ```luau
-function enum<Name, T>(
-   tag_name: Name
-   datatypes: T & { [string]: Datatype }
-): Datatype<T>
+function enum<TagName, T>(
+   tag_name: TagName & string
+   datatypes: { [string]: Datatype<T> }
+): Datatype<T & { [TagName]: string }>
 ```
 
 ## Unit Enums
 
-Unit enums are a set of possible strings, and can be accessed by calling `#!luau light.enum()` with one parameter.
+Unit enums are a set of possible literal values, and can be accessed by calling `#!luau light.enum()` with one
+parameter.
+
+!!! info "It's worth noting that Light's unit enums can also hold information for things other than text if needbe."
+
+!!! danger "Encoding will not do a deep equality check. If a value isn't **literally** an option in the unit enum, it will error when you try to encode."
 
 ```luau
 local state = light.enum({
