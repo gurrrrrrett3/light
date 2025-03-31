@@ -44,8 +44,14 @@ end
 return linkedlist
 ```
 
-!!! danger "You should never yield from within [`#!luau light.computed()`](./computed.md)'s lambda callback(s). This is considered undefined behavior."
+!!! danger "You should never yield from within [`#!luau light.computed()`](./computed.md)'s lambda callback(s)."
 
-!!! danger "You should never fire any event from within [`#!luau light.computed()`](./computed.md)'s lambda callback(s). This is considered undefined behavior."
+    This is considered undefined behavior.
 
-!!! danger "[`#!luau light.computed()`](./computed.md) allows for recursive types. If you pass a self-referential table, serialization may hang forever."
+!!! danger "You should never fire any event from within [`#!luau light.computed()`](./computed.md)'s lambda callback(s)."
+
+    This is considered undefined behavior.
+
+!!! danger "[`#!luau light.computed()`](./computed.md) allows for recursive types."
+
+    If you pass a self-referential table, serialization may hang forever.
