@@ -182,7 +182,7 @@ end
 
 This is great, now finding a stream is ~O(n*s) where "n" is the number of players we're querying for, and "s" is the
 number of streams of the same number of subscribed users. Not too shabby! Though, we want it to be really quick to find
-our streams which we've already created. We'll add a new data set "`#!luau local player_queryable`" to let the player
+our streams which we've already created. We'll add a new data set `#!luau local player_queryable` to let the player
 know which streams it is already listening to, so we can iterate that instead of all of the streams. If no matching
 streams are found in the first player's dataset, we need to make a new stream.
 

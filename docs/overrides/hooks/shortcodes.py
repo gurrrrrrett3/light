@@ -16,13 +16,13 @@ def on_page_markdown(
 		type, args = match.groups()
 		args = args.strip()
 
-		if type == "client": return f'<a href="/light/api/#tag-client" target="_blank"><!-- b:client --></a>'
-		elif type == "server": return f'<a href="/light/api/#tag-server" target="_blank"><!-- b:server --></a>'
-		elif type == "shared": return f'<a href="/light/api/#tag-shared" target="_blank"><!-- b:shared --></a>'
-		elif type == "sync": return f'<a href="/light/api/#tag-sync" target="_blank"><!-- b:sync --></a>'
-		elif type == "async": return f'<a href="/light/api/#tag-async" target="_blank"><!-- b:async --></a>'
-		elif type == "errors": return f'<a href="/light/api/#tag-errors" target="_blank"><!-- b:errors --></a>'
-		elif type == "experimental": return f'<a href="/light/api/#tag-experimental" target="_blank"><!-- b:experimental --></a>'
+		if type == "client": return f'<a href="/light/api/#tag-client" target="_blank"><span class="md-tag md-tag-icon md-tag--client">Client</span></a>'
+		elif type == "server": return f'<a href="/light/api/#tag-server" target="_blank"><span class="md-tag md-tag-icon md-tag--server">Server</span></a>'
+		elif type == "shared": return f'<a href="/light/api/#tag-shared" target="_blank"><span class="md-tag md-tag-icon md-tag--shared">Shared</span></a>'
+		elif type == "sync": return f'<a href="/light/api/#tag-sync" target="_blank"><span class="md-tag md-tag-icon md-tag--sync">Synchronous</span></a>'
+		elif type == "async": return f'<a href="/light/api/#tag-async" target="_blank"><span class="md-tag md-tag-icon md-tag--async">Yielding</span></a>'
+		elif type == "errors": return f'<a href="/light/api/#tag-errors" target="_blank"><span class="md-tag md-tag-icon md-tag--errors">Errors</span></a>'
+		elif type == "experimental": return f'<a href="/light/api/#tag-experimental" target="_blank"><span class="md-tag md-tag-icon md-tag--experimental">Experimental</span></a>'
 		elif type == "internal": return f'<a href="/light/api/#tag-internal" target="_blank"><span class="md-tag md-tag-icon md-tag--internal">Internal</span></a>'
 
 		# Otherwise, raise an error
