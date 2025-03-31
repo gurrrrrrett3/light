@@ -76,6 +76,16 @@ extra_css:
   - stylesheets/extra.css
 
 extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/hardlyardi/light/
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@hardlyardi
+    - icon: fontawesome/brands/discord
+      link: https://placeholder.gg/
+    - icon: material/butterfly-outline
+      link: https://bsky.app/profile/ardidasillygoose.bsky.social
+
   tags:
     Server: server
     Client: client
