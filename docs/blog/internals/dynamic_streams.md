@@ -194,7 +194,7 @@ type Stream = {
 }
 
 local queryable_streams: { Stream } = {}
-local player_queryable: { [Player] = { Stream } }
+local player_queryable: { [Player]: { Stream } } = {}
 
 local query_stream
 do
