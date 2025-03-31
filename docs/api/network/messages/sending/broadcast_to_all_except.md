@@ -15,7 +15,7 @@ differences. Broadcasting to a group of players can impact ordering in ways that
 
 ## `#!luau function light.broadcast_to_all_except`
 
-```luau title='<span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>'
+```luau title='<!-- b:server --> <!-- b:sync -->'
 function broadcast_to_all_except<T>(
    message: Message<T>,
    exclude: Player | { Player },

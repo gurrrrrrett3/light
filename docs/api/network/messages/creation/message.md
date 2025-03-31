@@ -5,7 +5,7 @@ string map.
 
 ## `#!luau function light.message`
 
-```luau title='<span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--shared">Shared</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span> <span class="md-tag md-tag-icon md-tag--async">Yielding</span>'
+```luau title='<!-- b:client --> <!-- b:shared --> <!-- b:sync --> <!-- b:async -->'
 function message<T>(
     name: string,
     template: Datatype<T>
@@ -14,7 +14,7 @@ function message<T>(
 
 ## `#!luau function light.message`
 
-```luau title='<span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>'
+```luau title='<!-- b:server --> <!-- b:sync -->'
 function message<T>(
     name: string,
     template: Datatype<T>

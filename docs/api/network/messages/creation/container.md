@@ -14,7 +14,7 @@ in this API is by design, and meant to make defining messages easy.
 
 ## `#!luau function light.container`
 
-```luau title='<span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--shared">Shared</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span> <span class="md-tag md-tag-icon md-tag--async">Yielding</span>'
+```luau title='<!-- b:client --> <!-- b:shared --> <!-- b:sync --> <!-- b:async -->'
 function container<T>(
     message_names: T & { [string]: Datatype },
     namespace: string?
@@ -23,7 +23,7 @@ function container<T>(
 
 ## `#!luau function light.container`
 
-```luau title='<span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>'
+```luau title='<!-- b:server --> <!-- b:sync -->'
 function container<T>(
     message_names: T & { [string]: Datatype },
     namespace: string?

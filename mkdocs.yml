@@ -109,6 +109,9 @@ extra:
     Experimental: experimental
     Internal: internal
 
+hooks:
+  - docs/overrides/hooks/shortcodes.py
+
 markdown_extensions:
   - abbr
   - admonition

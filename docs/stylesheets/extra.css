@@ -4,8 +4,82 @@
 .md-header__button.md-logo svg {
     fill:currentcolor;
     display:block;
-    height:1.9rem;
+    height:2rem;
     width:auto
+}
+
+/* recoloring */
+
+.md-sidebar {
+    background-color: #00000000;
+}
+
+:root {
+	--md-primary-fg-color: #e4c84f;
+	--md-accent-fg-color: #ffa32c;
+
+	--md-accent-fg-color--transparent: #f3b94d1a;
+
+	--md-primary-fg-color--light: #e4c84f;
+	--md-primary-fg-color--dark: #e4c84f;
+}
+
+:root,
+[data-md-color-scheme="default"] {
+	--md-default-fg-color: #000000 !important;
+    --fg-color: 0, 0, 0;
+}
+
+[data-md-color-scheme="slate"] {
+	--md-default-fg-color: #ffffff !important;
+    --fg-color: 255, 255, 255;
+}
+
+.md-search__form {
+    background-color: #000000cc;
+}
+
+.md-search__form:hover {
+	background-color: rgba(var(--fg-color), 0.2);
+}
+
+.md-header,
+
+/* more recoloring + blur */
+
+.md-tabs {
+	color: var(--md-default-fg-color);
+	background-color: initial;
+	backdrop-filter: blur(0.15rem);
+}
+
+/* Bottom Dashes */
+
+.md-tabs {
+    border-bottom: rgba(var(--fg-color), 0.5);
+    border-bottom-style: dashed;
+    border-bottom-width: .1rem;
+}
+
+/* refonting */
+
+.md-header__topic {
+	font-family: "Fira", serif;
+}
+
+.md-header__topic + .md-header__topic {
+	font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Fira", serif;
+
+	color: var(--md-default-fg-color) !important;
 }
 
 /* codeblock corners */
@@ -58,16 +132,18 @@
 /* tags */
 
 .md-tag.md-tag--server {
-	background: #6485f3;
+    --md-tag-color: #6485f3;
+	background: var(--md-tag-color);
 	color: #ffffff;
 
 	&::before {
 		background-color: #ffffff;
-	}
+	};
 }
 
 .md-tag.md-tag--client {
-	background: #ffb0ff;
+	--md-tag-color: #ffb0ff;
+    background: var(--md-tag-color);
 	color: #ffffff;
 
 	&::before {
@@ -76,7 +152,8 @@
 }
 
 .md-tag.md-tag--shared {
-	background: #6d54bb;
+	--md-tag-color: #f3d964;
+    background: var(--md-tag-color);
 	color: #ffffff;
 
 	&::before {
@@ -85,7 +162,8 @@
 }
 
 .md-tag.md-tag--async {
-	background: #ffa32c;
+	--md-tag-color: #ffa32c;
+    background: var(--md-tag-color);
 	color: #ffffff;
 
 	&::before {
@@ -94,7 +172,8 @@
 }
 
 .md-tag.md-tag--sync {
-	background: #9bd32b;
+	--md-tag-color: #9bd32b;
+    background: var(--md-tag-color);
 	color: #ffffff;
 
 	&::before {
@@ -103,7 +182,8 @@
 }
 
 .md-tag.md-tag--experimental {
-	background: #6d54bb;
+	--md-tag-color: #6d54bb;
+    background: var(--md-tag-color);
 	color: #ffffff;
 
 	&::before {
@@ -112,12 +192,31 @@
 }
 
 .md-tag.md-tag--errors {
-	background: #ff3860;
+	--md-tag-color: #ff3860;
+    background: var(--md-tag-color);
 	color: #ffffff;
 
 	&::before {
 		background-color: #ffffff;
 	}
+}
+
+.md-tag.md-tag--internal {
+    --md-tag-color: #444444;
+    color: var(--md-default-fg-color)
+}
+
+/* tag hover behavior*/
+
+.md-tag.md-tag:hover {
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+    
+    transition: 0.2s;
+    -webkit-box-shadow:0px 0px 93px 5px var(--md-tag-color);
+    -moz-box-shadow: 0px 0px 93px 5px var(--md-tag-color);
+    box-shadow: 0px 0px 93px 5px var(--md-tag-color);
 }
 
 /* badges from mkdocs material */

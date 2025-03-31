@@ -19,7 +19,7 @@ Using the above table syntax will behave the same as the API shown below.
 
 ## `#!luau function light.struct`
 
-```luau title='<span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--shared">Shared</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>'
+```luau title='<!-- b:client --> <!-- b:server --> <!-- b:shared --> <!-- b:sync -->'
 function struct<T>(
     map: T & { [string]: Datatype },
 ): Datatype<T>

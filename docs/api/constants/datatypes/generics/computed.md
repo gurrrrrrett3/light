@@ -26,7 +26,7 @@ useful for <a href="https://en.wikipedia.org/wiki/Linked_list" target="_blank">L
 
 ## `#!luau function light.computed`
 
-```luau title='<span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--shared">Shared</span> <span class="md-tag md-tag-icon md-tag--experimental">Experimental</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>'
+```luau title='<!-- b:client --> <!-- b:server --> <!-- b:shared --> <!-- b:experimental --> <!-- b:sync -->'
 function computed<Output>(
     lambda: () -> (Datatype<Output>)
 ): Datatype<Output>
@@ -49,7 +49,7 @@ function computed<Output>(
 !!! info "[`#!luau light.computed()`](./computed.md) can also be called with two arguments as shown above."
 
     You can utilize this to create a custom type, returning a number for the new buffer byte ptr. If used correctly,
-    you could use this to re-implement custom dynamic types such as [Enums](./enums.md). This feature is <span class="md-tag md-tag-icon md-tag--experimental">Experimental</span>
+    you could use this to re-implement custom dynamic types such as [Enums](./enums.md). This feature is <!-- b:experimental -->
 
 An example <a href="https://en.wikipedia.org/wiki/Linked_list" target="_blank">LinkedList</a> [Datatype](../index.md)
 using [`#!luau light.computed()`](./computed.md) and [Cached Datatypes](./cached.md):

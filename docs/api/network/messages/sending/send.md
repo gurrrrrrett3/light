@@ -2,7 +2,7 @@
 
 ## `#!luau function light.send`
 
-```luau title='<span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>'
+```luau title='<!-- b:client --> <!-- b:sync -->'
 function send<T>(
     message: Message<T>,
     data: T
@@ -17,7 +17,7 @@ light.send(messages.foo, 1234)
 
 ## `#!luau function light.send`
 
-```luau title='<span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>'
+```luau title='<!-- b:server --> <!-- b:sync -->'
 function send<T>(
     message: Message<T>,
     to: Player | { Player },

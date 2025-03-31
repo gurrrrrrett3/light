@@ -5,7 +5,7 @@ Send Unreliably To All is identical to [`#!luau light.send_to_all()`](./send_to_
 
 ## `#!luau function light.send_unreliably_to_all`
 
-```luau title='<span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>'
+```luau title='<!-- b:server --> <!-- b:sync -->'
 function send_unreliably_to_all<T>(
     message: Message<T>,
     data: T
