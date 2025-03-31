@@ -1,3 +1,3 @@
 # Holy Light
 
-(Holy) Light is a lightweight, advanced Remote Event wrapper for roblox.
+(Holy) Light is a lightweight, advanced Remote Event wrapper for Roblox.
