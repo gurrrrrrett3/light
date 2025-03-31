@@ -18,8 +18,8 @@ Using the above table syntax will behave the same as the API shown below.
 
 ```luau
 function arr<Item>(
-   item: Datatype<Item>,
-   length: Datatype<number>?
+    item: Datatype<Item>,
+    length: Datatype<number>?
 ): Datatype<{T}>
 ```
 

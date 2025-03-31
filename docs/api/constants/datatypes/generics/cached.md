@@ -20,6 +20,11 @@ An example
 <a href="https://en.wikipedia.org/wiki/Linked_list" target="_blank">LinkedList</a> [Datatype](../index.md)
 using [`#!luau light.cached()`](./cached.md) and [Computed Datatypes](./computed.md):
 
+!!! dragons "Here be dragons, thou art forewarned."
+
+    Computed datatypes are currently untested. You may run into unexpected behavior, edge cases, and more "fun" issues.
+    Use them at your own risk.
+
 ```luau title="linked_list.luau"
 -- as a word of warning, you probably shouldn't give this a `head` field.
 local function linkedlist<T>(value: Datatype<T>)
@@ -38,6 +43,8 @@ end
 
 return linkedlist
 ```
+
+!!! danger "You should never yield from within [`#!luau light.computed()`](./computed.md)'s lambda callback(s). This is considered undefined behavior."
 
 !!! danger "You should never fire any event from within [`#!luau light.computed()`](./computed.md)'s lambda callback(s). This is considered undefined behavior."
 

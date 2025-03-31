@@ -9,9 +9,9 @@ You can define a valid struct [Datatype](../index.md) using a simple table, just
 
 ```luau
 local some_struct = {
-   foo_field = light.u8,
-   bar_field = light.i16,
-   bar_field = light.str()
+    foo_field = light.u8,
+    bar_field = light.i16,
+    bar_field = light.str()
 }
 ```
 
@@ -21,6 +21,6 @@ Using the above table syntax will behave the same as the API shown below.
 
 ```luau
 function struct<T>(
-   map: T & { [string]: Datatype },
+    map: T & { [string]: Datatype },
 ): Datatype<T>
 ```

@@ -9,7 +9,7 @@
 
 ```luau
 function vector2(
-   coord: Datatype<number>?
+    coord: Datatype<number>?
 ): Datatype<vector>
 ```
 

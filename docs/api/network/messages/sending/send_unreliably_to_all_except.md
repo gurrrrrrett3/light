@@ -7,8 +7,8 @@ players except a player or list of players.
 
 ```luau
 function send_unreliably_to_all_except<T>(
-   message: Message<T>,
-   exclude: Player | { Player },
-   data: T
+    message: Message<T>,
+    exclude: Player | { Player },
+    data: T
 ): ()
 ```

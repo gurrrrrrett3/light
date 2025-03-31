@@ -23,7 +23,7 @@ The recommended way to create messages in light is with a simple ModuleScript.
 local light = require(ReplicatedStorage.light).shared
 
 local container = light.container({
-   ping = light.literal(nil),
+    ping = light.literal(nil),
 }, "messages")
 
 light.init()
@@ -65,7 +65,7 @@ local light = require(ReplicatedStorage.light).server
 local messages = require(ReplicatedStorage.messages)
 
 light.connect(messages.ping, function(player)
-   print("pong!")
+    print("pong!")
 end)
 ```
 
@@ -81,7 +81,7 @@ local light = require(ReplicatedStorage.light).server
 local messages = require(ReplicatedStorage.messages)
 
 light.connect(messages.ping, function(player)
-   light.send(messages.ping, player)
+    light.send(messages.ping, player)
 end)
 ```
 
@@ -96,7 +96,7 @@ local light = require(ReplicatedStorage.light).client
 local messages = require(ReplicatedStorage.messages)
 
 light.connect(messages.ping, function()
-   print("pong!")
+    print("pong!")
 end)
 
 light.send(messages.ping)

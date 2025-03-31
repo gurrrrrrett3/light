@@ -12,16 +12,16 @@ out of hand in size. As an example, here's the [vect caching](../../../api/const
 ```luau
 local vect3_shape_cache = {} :: { [Shape<any>]: Shape<any> }
 local function vect(xyz_shape: Shape<number>?): Shape<vector>
-   local coord_shape = xyz_shape or f32
-   if not number_types_map[coord_shape] then
-      error(debug.traceback("holy.vector must take in a number"))
-   end
+    local coord_shape = xyz_shape or f32
+    if not number_types_map[coord_shape] then
+        error(debug.traceback("holy.vector must take in a number"))
+    end
 
-   local cached = vect3_shape_cache[coord_shape]
-   if cached then return cached end
+    local cached = vect3_shape_cache[coord_shape]
+    if cached then return cached end
 
-   local vector_shape = new_id()
-   vect3_shape_cache[coord_shape] = vector_shape
+    local vector_shape = new_id()
+    vect3_shape_cache[coord_shape] = vector_shape
 end
 ```
 

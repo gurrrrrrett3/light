@@ -4,7 +4,7 @@
 
 ```luau
 function buff(
-   length: Datatype<number>?
+    length: Datatype<number>?
 ): Datatype<buffer>
 ```
 

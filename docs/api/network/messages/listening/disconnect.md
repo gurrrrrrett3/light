@@ -30,40 +30,40 @@ An example message-call profiler using
 ```luau title="profiler.luau"
 local profile_message
 do
-   local sessions = {}
-   function profile_message(message: Message)
-      if sessions[message] then
-         return nil
-      end
+    local sessions = {}
+    function profile_message(message: Message)
+        if sessions[message] then
+            return nil
+        end
 
-      local old_callback = light.disconnect(message)
+        local old_callback = light.disconnect(message)
 
-      if not old_callback then
-         return nil
-      end
+        if not old_callback then
+            return nil
+        end
 
-      local calls = 0
+        local calls = 0
 
-      light.connect_sync(message, function(...)
-         calls += 1
+        light.connect_sync(message, function(...)
+            calls += 1
 
-         old_callback(...)
-      end)
+            old_callback(...)
+        end)
 
-      -- wrapping in a coroutine since session shouldn't be ended twice
-      sessions[message] = coroutine.wrap(function()
-         sessions[message] = nil
+        -- wrapping in a coroutine since session shouldn't be ended twice
+        sessions[message] = coroutine.wrap(function()
+            sessions[message] = nil
 
-         light.disconnect(message)
+            light.disconnect(message)
 
-         light.connect(message, old_callback)
+            light.connect(message, old_callback)
 
-         return table.freeze({
-            calls = calls
-         })
-      end)
+            return table.freeze({
+                calls = calls
+            })
+        end)
 
-      return sessions[message]
-   end
+        return sessions[message]
+    end
 end
 ```

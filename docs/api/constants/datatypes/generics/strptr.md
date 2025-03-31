@@ -12,7 +12,7 @@ massive performance gains.
 
 ```luau
 function strptr(
-   length: Datatype<number>?
+    length: Datatype<number>?
 ): Datatype<string>
 ```
 

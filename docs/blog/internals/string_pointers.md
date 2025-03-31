@@ -7,9 +7,9 @@ an optional string pointer "index" for each [stream](./dynamic_streams.md). This
 ```luau title="serialize strptr"
 local value = str_ptr_index[string_data]
 if not value then
-   table.insert(str_ptr_batch, string_data)
-   value = #str_ptr_batch
-   str_ptr_index[string_data] = value
+    table.insert(str_ptr_batch, string_data)
+    value = #str_ptr_batch
+    str_ptr_index[string_data] = value
 end
 serialize_u16(value)
 ```

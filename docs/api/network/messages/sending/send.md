@@ -4,8 +4,8 @@
 
 ```luau
 function send<T>(
-   message: Message<T>,
-   data: T
+    message: Message<T>,
+    data: T
 ): ()
 ```
 
@@ -19,9 +19,9 @@ light.send(messages.foo, 1234)
 
 ```luau
 function send<T>(
-   message: Message<T>,
-   to: Player | { Player },
-   data: T
+    message: Message<T>,
+    to: Player | { Player },
+    data: T
 ): ()
 ```
 
@@ -29,8 +29,12 @@ Send a message with given data to a player, for example:
 
 ```luau
 Players.PlayerAdded:Connect(function(player)
-   light.send(messages.foo, player, 1234)
+    light.send(messages.foo, player, 1234)
 end)
 ```
 
-!!! info "On the server, you should usually prefer [`#!luau light.broadcast`](./broadcast.md) over [`#!luau light.send()`](./send.md), because the latter can take up more memory. Light "broadcasts" can save memory by writing data to a single stream and batching it to relevant players instead of writing to a single stream and copying it for each player. To learn more, check out [The Internals Blog](../../../../blog/internals/dynamic_streams.md) on the topic."
+!!! info "On the server, you should usually prefer [`#!luau light.broadcast()`](./broadcast.md) over [`#!luau light.send()`](./send.md)."
+
+    This is because the latter can take up more memory. Light "broadcasts" can save memory by writing data to a single
+    stream and batching it to relevant players instead of writing to a single stream and copying it for each player. To
+    learn more, check out [The Internals Blog](../../../../blog/internals/dynamic_streams.md) on the topic."

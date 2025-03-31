@@ -43,17 +43,17 @@ how the constant lookup table is generated:
 ```luau
 local constant_bitfield_lookup: { boolean }
 do
-   constant_bitfield_lookup = table.create( (2 ^ 8) * 8 )
+    constant_bitfield_lookup = table.create( (2 ^ 8) * 8 )
 
-   local index
-   for encoded = 0, ((2 ^ 8) * 8) - 1 do
-      index = encoded * 8
+    local index
+    for encoded = 0, ((2 ^ 8) * 8) - 1 do
+        index = encoded * 8
 
-      for bit = 1, 8 do
-         constant_bitfield_lookup[index + bit] = encoded % 2
-         encoded //= 2
-      end
-   end
+        for bit = 1, 8 do
+            constant_bitfield_lookup[index + bit] = encoded % 2
+            encoded //= 2
+        end
+    end
 end
 ```
 

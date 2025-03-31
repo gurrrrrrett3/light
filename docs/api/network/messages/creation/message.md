@@ -7,8 +7,8 @@ string map.
 
 ```luau
 function message<T>(
-   name: string,
-   template: Datatype<T>
+    name: string,
+    template: Datatype<T>
 ): (Message<T>)
 ```
 
@@ -16,8 +16,8 @@ function message<T>(
 
 ```luau
 function message<T>(
-   name: string,
-   template: Datatype<T>
+    name: string,
+    template: Datatype<T>
 ): (Message<T>)
 ```
 
@@ -30,7 +30,7 @@ If you wanted to recreate the behavior of this code:
 
 ```luau
 return light.container({
-   ping = light.literal(nil),
+    ping = light.literal(nil),
 })
 ```
 
@@ -38,6 +38,6 @@ You can do that with raw message api:
 
 ```luau
 return {
-   ping = light.message("ping", light.literal(nil))
+    ping = light.message("ping", light.literal(nil))
 }
 ```

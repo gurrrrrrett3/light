@@ -7,6 +7,6 @@ costing zero bytes.
 
 ```luau
 function literal<Value>(
-   value: Value
+    value: Value
 ): Datatype<Value>
 ```

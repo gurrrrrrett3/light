@@ -10,8 +10,8 @@ There is no size limit on light unreliable sending, however sending
 
 ```luau
 function send_unreliably<T>(
-   message: Message<T>,
-   data: T
+    message: Message<T>,
+    data: T
 ): ()
 ```
 
@@ -19,8 +19,8 @@ function send_unreliably<T>(
 
 ```luau
 function send_unreliably<T>(
-   message: Message<T>,
-   to: Player | { Player },
-   data: T
+    message: Message<T>,
+    to: Player | { Player },
+    data: T
 ): ()
 ```

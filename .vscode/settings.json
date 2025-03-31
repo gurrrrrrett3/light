@@ -1,8 +1,13 @@
 {
-   "markdownlint.config": {
-      // Inline HTML
-      "MD033": false,
-      // Multiple top level headers
-      "MD025": false
-   }
+    "markdownlint.config": {
+        // Inline HTML
+        "MD033": false,
+        // Multiple top level headers
+        "MD025": false,
+        // Indentation Codeblocks Thingy
+        "MD046": false
+    },
+
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false
 }

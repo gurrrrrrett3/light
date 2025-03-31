@@ -7,8 +7,8 @@ Send Unreliably To All is identical to [`#!luau light.send_to_all()`](./send_to_
 
 ```luau
 function send_unreliably_to_all<T>(
-   message: Message<T>,
-   data: T
+    message: Message<T>,
+    data: T
 ): ()
 ```
 

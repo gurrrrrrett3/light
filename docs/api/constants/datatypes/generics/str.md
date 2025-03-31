@@ -8,7 +8,7 @@ Consider using [`#!luau light.strptr()`](./strptr.md) instead if you serialize a
 
 ```luau
 function str(
-   length: Datatype<number>?
+    length: Datatype<number>?
 ): Datatype<string>
 ```
 

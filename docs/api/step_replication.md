@@ -18,6 +18,6 @@ local light = require(ReplicatedStorage.light).shared
 
 -- identical to initializing without manual replication
 RunService.PostSimulation:Connect(function()
-   light.step_replication()
+    light.step_replication()
 end)
 ```

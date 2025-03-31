@@ -6,6 +6,6 @@ Optionals represent a value which could be `#!luau nil`.
 
 ```luau
 function optional<Inner>(
-   inner: Datatype<Inner>
+    inner: Datatype<Inner>
 ): Datatype<Inner?>
 ```

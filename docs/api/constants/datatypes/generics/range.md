@@ -4,8 +4,8 @@
 
 ```luau
 function range(
-   minimum: number,
-   maximum: number
+    minimum: number,
+    maximum: number
 ): Datatype<number>
 ```
 

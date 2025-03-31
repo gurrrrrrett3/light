@@ -15,8 +15,8 @@ The server defines the messages immediately, so `#!luau container {}` will never
 
 ```luau
 function container<T>(
-   message_names: T & { [string]: Datatype },
-   namespace: string?
+    message_names: T & { [string]: Datatype },
+    namespace: string?
 ): (T)
 ```
 
@@ -24,8 +24,8 @@ function container<T>(
 
 ```luau
 function container<T>(
-   message_names: T & { [string]: Datatype },
-   namespace: string?
+    message_names: T & { [string]: Datatype },
+    namespace: string?
 ): (T)
 ```
 
@@ -35,7 +35,7 @@ Some example code using containers:
 local light = require(ReplicatedStorage.light).shared
 
 return light.container({
-   ping = light.literal(nil),
+    ping = light.literal(nil),
 }, "some-cool-namespace")
 ```
 

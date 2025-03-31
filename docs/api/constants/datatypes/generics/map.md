@@ -13,9 +13,9 @@ local some_map = { [light.str()] = light.u8 }
 
 ```luau
 function map<Key, Value>(
-   key: Datatype<Key>,
-   value: Datatype<Value>,
-   length: Datatype<number>?
+    key: Datatype<Key>,
+    value: Datatype<Value>,
+    length: Datatype<number>?
 ): Datatype<{ [Key]: Value }>
 ```
 

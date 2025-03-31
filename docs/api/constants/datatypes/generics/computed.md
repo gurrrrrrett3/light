@@ -7,26 +7,49 @@ useful for <a href="https://en.wikipedia.org/wiki/Linked_list" target="_blank">L
 
 !!! danger "Introducing external conditionality to serialization / deserialization can be dangerous. Please be careful."
 
-!!! danger "You should never fire any event from within [`#!luau light.computed()`](./computed.md)'s lambda callback(s). This is considered undefined behavior."
+!!! danger "You should never yield from within [`#!luau light.computed()`](./computed.md)'s lambda callback(s)."
 
-!!! danger "[`#!luau light.computed()`](./computed.md) allows for recursive types. If you pass a self-referential table, serialization may hang forever."
+    This is considered undefined behavior."
 
-## `#!luau function computed` <span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--shared">Shared</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>
+!!! danger "You should never fire any event from within [`#!luau light.computed()`](./computed.md)'s lambda callback(s)."
+
+    This is considered undefined behavior."
+
+!!! danger "[`#!luau light.computed()`](./computed.md) allows for recursive types."
+
+    If you pass a self-referential table, serialization may hang forever."
+
+!!! dragons "Here be dragons, thou art forewarned."
+
+    Computed datatypes are currently untested. You may run into unexpected behavior, edge cases, and more "fun" issues.
+    Use them at your own risk.
+
+## `#!luau function computed` <span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--shared">Shared</span> <span class="md-tag md-tag-icon md-tag--experimental">Experimental</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>
 
 ```luau
 function computed<Output>(
-   lambda: () -> (Datatype<Output>)
+    lambda: () -> (Datatype<Output>)
 ): Datatype<Output>
 ```
 
 ```luau
 function computed<Output>(
-   ser: (buff: buffer, byte_ptr: number, data: any) -> (Datatype<Output>, number),
-   des: (buff: buffer, byte_ptr: number) -> (Datatype<Output>, number)
+    ser: (
+        writer: Writer,
+        byte_ptr: number,
+        data: any
+    ) -> (number),
+    des: (
+        writer: Writer,
+        byte_ptr: number
+    ) -> (Output, number)
 ): Datatype<Output>
 ```
 
-!!! info "[`#!luau light.computed()`](./computed.md) can also be called with two arguments as shown above for more precise control over logic, returning a number for the new buffer byte ptr. If used correctly, you could use this to re-implement custom dynamic types such as [Enums](./enums.md)."
+!!! info "[`#!luau light.computed()`](./computed.md) can also be called with two arguments as shown above."
+
+    You can utilize this to create a custom type, returning a number for the new buffer byte ptr. If used correctly,
+    you could use this to re-implement custom dynamic types such as [Enums](./enums.md). This feature is <span class="md-tag md-tag-icon md-tag--experimental">Experimental</span>
 
 An example <a href="https://en.wikipedia.org/wiki/Linked_list" target="_blank">LinkedList</a> [Datatype](../index.md)
 using [`#!luau light.computed()`](./computed.md) and [Cached Datatypes](./cached.md):
@@ -34,17 +57,17 @@ using [`#!luau light.computed()`](./computed.md) and [Cached Datatypes](./cached
 ```luau title="linked_list.luau"
 -- as a word of warning, you probably shouldn't give this a `head` field.
 local function linkedlist<T>(value: Datatype<T>)
-   local Datatype
+    local Datatype
 
-   Datatype = light.cached {
-      next = light.optional(light.computed(function()
-         return Datatype
-      end)),
-      
-      value = value
-   }
-
-   return Datatype
+    Datatype = light.cached {
+        next = light.optional(light.computed(function()
+            return Datatype
+        end)),
+        
+        value = value
+    }
+ 
+    return Datatype
 end
 
 return linkedlist

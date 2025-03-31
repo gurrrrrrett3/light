@@ -8,7 +8,7 @@ handle event queueing for you.)
 
 ```luau
 function init(
-   manual_replication: boolean?
+    manual_replication: boolean?
 ): ()
 ```
 

@@ -32,9 +32,9 @@ Now, we run the first line: `#!luau send({plr1, plr2}, 1234)`
 ser 1234 -> 0b10011010010
                  |
 send_buffers = { | write
-   plr1 = [0b..10011010010]
+    plr1 = [0b..10011010010]
                  | copy
-   plr2 = [0b..10011010010]
+    plr2 = [0b..10011010010]
 }
 ```
 
@@ -42,10 +42,10 @@ Now, the second: `#!luau send({plr1}, 4321)`
 
 ```luau title="buffer-copy-example"
 ser 4321 -> 0b1000011100001
-                        |
-send_buffers = {        | write
-   plr1 = [0b..10011010010..1000011100001]
-   plr2 = [0b..10011010010..]
+                         |
+send_buffers = {         | write
+    plr1 = [0b..10011010010..1000011100001]
+    plr2 = [0b..10011010010..]
 }
 ```
 
@@ -70,8 +70,8 @@ users. Now, you get something like this for your buffers:
 
 ```luau title="pseudocode-send-buffer-with-records"
 send_buffers = {
-   {plr1, plr2} = [0b--[[...]]],
-   {plr1} = [0b--[[...]]]
+    {plr1, plr2} = [0b--[[...]]],
+    {plr1}       = [0b--[[...]]]
 }
 ```
 
@@ -85,19 +85,19 @@ memory:
 local player_send_batches = {}
 
 for players, buff in send_buffers do
-   for _, player in players do
-      local send_batch = player_send_batches[player]
-      if not send_batch then
-         send_batch = { buff }
-         player_send_batches[player] = send_batch
-         continue
-      end
-      table.insert(send_batch, buff)
-   end
+    for _, player in players do
+        local send_batch = player_send_batches[player]
+        if not send_batch then
+            send_batch = { buff }
+            player_send_batches[player] = send_batch
+            continue
+        end
+        table.insert(send_batch, buff)
+    end
 end
 
 for player, batch in player_send_batches do
-   ReliableRemoteEvent:FireClient(player, table.unpack(batch))
+    ReliableRemoteEvent:FireClient(player, table.unpack(batch))
 end
 ```
 
@@ -118,8 +118,8 @@ array to iterate.
 
 ```luau title="querying_streams.luau"
 type Stream = {
-   subscribed_users: { Player },
-   buff_batch: ...
+    subscribed_users: { Player },
+    buff_batch: ...
 }
 
 local queryable_streams: { Stream } = {}
@@ -132,9 +132,9 @@ match for each player. But that takes a lot of time if we create lots of streams
 
 ```luau title="querying_streams.luau"
 type Stream = {
-   subscribed_users: { Player },
-   num_subscribed_users: number,
-   buff_batch: ...
+    subscribed_users: { Player },
+    num_subscribed_users: number,
+    buff_batch: ...
 }
 ```
 
@@ -143,40 +143,40 @@ check if someone is subscribed to a stream in O(1) time. Now, we can make our qu
 
 ```luau title="querying_streams.luau"
 type Stream = {
-   subscribed_set: { [Player]: true? },
-   num_subscribed_users: number,
-   buff_batch: ...
+    subscribed_set: { [Player]: true? },
+    num_subscribed_users: number,
+    buff_batch: ...
 }
 
 local queryable_streams: { Stream } = {}
 
 local query_stream
 do
-   function query_stream(querying_users: { Player }): Stream
-      local querying_for_num = #querying_users
+    function query_stream(querying_users: { Player }): Stream
+       local querying_for_num = #querying_users
 
-      for _, queryable_stream in queryable_streams do
-         if queryable_stream.num_subscribed_users ~= querying_for_num then
-            continue
-         end
-
-         local subscribed_set = queryable_stream.subscribed_set
-
-         local matching_stream = queryable_stream
-
-         for index = 1, querying_for_num do
-            if subscribed_set[querying_users[index]] then
-               continue
+       for _, queryable_stream in queryable_streams do
+            if queryable_stream.num_subscribed_users ~= querying_for_num then
+                continue
             end
-            matching_stream = nil
-            break
-         end
 
-         if matching_stream then return matching_stream end
-      end
+            local subscribed_set = queryable_stream.subscribed_set
 
-      return make_stream(querying_users)
-   end
+            local matching_stream = queryable_stream
+
+            for index = 1, querying_for_num do
+                if subscribed_set[querying_users[index]] then
+                    continue
+                end
+                matching_stream = nil
+                break
+            end
+
+           if matching_stream then return matching_stream end
+       end
+
+       return make_stream(querying_users)
+    end
 end
 ```
 
@@ -188,9 +188,9 @@ streams are found in the first player's dataset, we need to make a new stream.
 
 ```luau title="querying_streams.luau"
 type Stream = {
-   subscribed_set: { [Player]: true? },
-   num_subscribed_users: number,
-   buff_batch: ...
+    subscribed_set: { [Player]: true? },
+    num_subscribed_users: number,
+    buff_batch: ...
 }
 
 local queryable_streams: { Stream } = {}
@@ -198,39 +198,39 @@ local player_queryable: { [Player]: { Stream } } = {}
 
 local query_stream
 do
-   function query_stream(querying_users: { Player }): Stream
-      local querying_for_num = #querying_users
+    function query_stream(querying_users: { Player }): Stream
+        local querying_for_num = #querying_users
 
-      local queryable = player_queryable[querying_users[1]]
-      if not queryable then
-         return make_stream(querying_users)
-      end
+        local queryable = player_queryable[querying_users[1]]
+        if not queryable then
+            return make_stream(querying_users)
+        end
 
-      --[[
-      Same code as before!
-      ]]
-      for _, queryable_stream in queryable do
-         if queryable_stream.num_subscribed_users ~= querying_for_num then
-            continue
-         end
-
-         local subscribed_set = queryable_stream.subscribed_set
-
-         local matching_stream = queryable_stream
-
-         for index = 1, querying_for_num do
-            if subscribed_set[querying_users[index]] then
-               continue
+        --[[
+        Same code as before!
+        ]]
+        for _, queryable_stream in queryable do
+            if queryable_stream.num_subscribed_users ~= querying_for_num then
+                continue
             end
-            matching_stream = nil
-            break
-         end
 
-         if matching_stream then return matching_stream end
-      end
+            local subscribed_set = queryable_stream.subscribed_set
 
-      return make_stream(querying_users)
-   end
+            local matching_stream = queryable_stream
+
+            for index = 1, querying_for_num do
+                if subscribed_set[querying_users[index]] then
+                    continue
+                end
+                matching_stream = nil
+                break
+            end
+
+            if matching_stream then return matching_stream end
+        end
+
+        return make_stream(querying_users)
+    end
 end
 ```
 

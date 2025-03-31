@@ -8,7 +8,7 @@ enums you will need to [typecast](https://luau.org/typecheck#type-casts) into a
 
 ```luau
 function enum<Units>(
-   units: { Units }
+    units: { Units }
 ): Datatype<Units>
 ```
 
@@ -16,8 +16,8 @@ function enum<Units>(
 
 ```luau
 function enum<TagName, T>(
-   tag_name: TagName & string
-   datatypes: { [string]: Datatype<T> }
+    tag_name: TagName & string
+    datatypes: { [string]: Datatype<T> }
 ): Datatype<T & { [TagName]: string }>
 ```
 
@@ -28,14 +28,16 @@ parameter.
 
 !!! info "It's worth noting that Light's unit enums can also hold information for things other than text if needbe."
 
-!!! danger "Encoding will not do a deep equality check. If a value isn't literally an option in the unit enum, it will error when you try to encode."
+!!! danger "Encoding will not do a deep equality check."
+
+    If a value isn't literally an option in the unit enum, it will error when you try to encode.
 
 ```luau
 local state = light.enum({
-   "Starting" :: "Starting",
-   "Started" :: "Started",
-   "Stopping" :: "Stopping",
-   "Stopped" :: "Stopped"
+    "Starting" :: "Starting",
+    "Started" :: "Started",
+    "Stopping" :: "Stopping",
+    "Stopped" :: "Stopped"
 })
 ```
 
@@ -45,23 +47,23 @@ Tagged enums are a set of structs, with the first parameter for an identifier na
 
 ```luau
 local click_button = light.enum({
-   "Left" :: "Left",
-   "Right" :: "Right",
-   "Middle" :: "Middle"
+    "Left" :: "Left",
+    "Right" :: "Right",
+    "Middle" :: "Middle"
 })
 
 local mouse_event = light.enum("type", {
-   move = {
-      delta = light.vect2(),
-      position = light.vect2()
-   },
-   drag = {
-      delta = light.vect2(),
-      position = light.vect2()
-   },
-   click = {
-      click_button = click_button,
-      position = light.vect2()
-   }
+    move = {
+        delta = light.vect2(),
+        position = light.vect2()
+    },
+    drag = {
+        delta = light.vect2(),
+        position = light.vect2()
+    },
+    click = {
+        click_button = click_button,
+        position = light.vect2()
+    }
 })
 ```
