@@ -227,6 +227,12 @@ h6 {
     transition: 0.5s;
 }
 
+/* one of the zindex of all time */
+
+.md-tooltip2 {
+    z-index: 99 !important;
+}
+
 /* badges from mkdocs material */
 
 .md-typeset .mdx-badge {
