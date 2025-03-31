@@ -8,9 +8,9 @@ isn't one already, rendering it unusable for anything other than ser/des and eve
 [Datatypes](../index.md) automatically, but this can be useful in conjunction with other features like
 [Computed Datatypes](./computed.md).
 
-## `#!luau function cached` <span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--shared">Shared</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>
+## `#!luau function light.cached`
 
-```luau
+```luau title='<span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--shared">Shared</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>'
 function cached<T>(
    value: Datatype<T>
 ): Datatype<T>

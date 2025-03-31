@@ -5,9 +5,9 @@
 [Datatype](../index.md). This is not to be confused with [`#!luau light.vect2()`](./vect2.md), the luau
 [Datatype](../index.md).
 
-## `#!luau function vector2` <span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--shared">Shared</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>
+## `#!luau function light.vector2`
 
-```luau
+```luau title='<span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--shared">Shared</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>'
 function vector2(
     coord: Datatype<number>?
 ): Datatype<vector>

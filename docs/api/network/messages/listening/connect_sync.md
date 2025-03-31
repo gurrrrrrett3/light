@@ -12,18 +12,18 @@ large servers (or memory usage).
 
     Consider calling [`#!luau light.disconnect()`](./disconnect.md) first if this is an issue.
 
-## `#!luau function connect_sync` <span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span> <span class="md-tag md-tag-icon md-tag--errors">Errors</span>
+## `#!luau function light.connect_sync`
 
-```luau
+```luau title='<span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span> <span class="md-tag md-tag-icon md-tag--errors">Errors</span>'
 function connect_sync<T>(
    message: Message<T>,
    callback: (T) -> ()
 ): ()
 ```
 
-## `#!luau function connect_sync` <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span> <span class="md-tag md-tag-icon md-tag--errors">Errors</span>
+## `#!luau function light.connect_sync`
 
-```luau
+```luau title='<span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span> <span class="md-tag md-tag-icon md-tag--errors">Errors</span>'
 function connect_sync<T>(
    message: Message<T>,
    callback: (Player, T) -> ()

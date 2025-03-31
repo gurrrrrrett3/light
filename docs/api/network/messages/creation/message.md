@@ -3,18 +3,18 @@
 Message does the same thing as a [`#!luau light.container()`](./container.md), but doesn't force you to put it in a
 string map.
 
-## `#!luau function message` <span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--shared">Shared</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span> <span class="md-tag md-tag-icon md-tag--async">Yielding</span>
+## `#!luau function light.message`
 
-```luau
+```luau title='<span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--shared">Shared</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span> <span class="md-tag md-tag-icon md-tag--async">Yielding</span>'
 function message<T>(
     name: string,
     template: Datatype<T>
 ): (Message<T>)
 ```
 
-## `#!luau function message` <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>
+## `#!luau function light.message`
 
-```luau
+```luau title='<span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>'
 function message<T>(
     name: string,
     template: Datatype<T>

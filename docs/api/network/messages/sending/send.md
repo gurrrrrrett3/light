@@ -1,8 +1,8 @@
 # Send
 
-## `#!luau function light.send` <span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>
+## `#!luau function light.send`
 
-```luau
+```luau title='<span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>'
 function send<T>(
     message: Message<T>,
     data: T
@@ -15,9 +15,9 @@ Send a message with given data to the server, for example:
 light.send(messages.foo, 1234)
 ```
 
-## `#!luau function light.send` <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>
+## `#!luau function light.send`
 
-```luau
+```luau title='<span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>'
 function send<T>(
     message: Message<T>,
     to: Player | { Player },

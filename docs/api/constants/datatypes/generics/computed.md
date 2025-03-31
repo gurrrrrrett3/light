@@ -24,9 +24,9 @@ useful for <a href="https://en.wikipedia.org/wiki/Linked_list" target="_blank">L
     Computed datatypes are currently untested. You may run into unexpected behavior, edge cases, and more "fun" issues.
     Use them at your own risk.
 
-## `#!luau function computed` <span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--shared">Shared</span> <span class="md-tag md-tag-icon md-tag--experimental">Experimental</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>
+## `#!luau function light.computed`
 
-```luau
+```luau title='<span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--shared">Shared</span> <span class="md-tag md-tag-icon md-tag--experimental">Experimental</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>'
 function computed<Output>(
     lambda: () -> (Datatype<Output>)
 ): Datatype<Output>

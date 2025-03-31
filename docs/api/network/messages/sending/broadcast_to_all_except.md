@@ -13,9 +13,9 @@ differences. Broadcasting to a group of players can impact ordering in ways that
     learn more about how Light dynamically groups streams for broadcasting, check out
     [The Internals Blog](../../../../blog/internals/dynamic_streams.md) on the topic.
 
-## `#!luau function broadcast_to_all_except` <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>
+## `#!luau function light.broadcast_to_all_except`
 
-```luau
+```luau title='<span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>'
 function broadcast_to_all_except<T>(
    message: Message<T>,
    exclude: Player | { Player },

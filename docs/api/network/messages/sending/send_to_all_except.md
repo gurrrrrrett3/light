@@ -9,9 +9,9 @@ list of players.
     stream and batching it to relevant players instead of writing to a single stream and copying it for each player. To
     learn more, check out [The Internals Blog](../../../../blog/internals/dynamic_streams.md) on the topic.
 
-## `#!luau function send_to_all_except` <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>
+## `#!luau function light.send_to_all_except`
 
-```luau
+```luau title='<span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>'
 function send_to_all_except<T>(
    message: Message<T>,
    exclude: Player | { Player },

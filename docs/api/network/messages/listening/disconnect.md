@@ -3,9 +3,9 @@
 You can use this to remove a callback from a message. [`#!luau light.disconnect()`](./disconnect.md) returns the old
 callback if there was one.
 
-## `#!luau function disconnect` <span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>
+## `#!luau function light.disconnect`
 
-```luau
+```luau title='<span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>'
 function disconnect<T>(
    message: Message<T>
 ) -> (
@@ -13,9 +13,9 @@ function disconnect<T>(
 )
 ```
 
-## `#!luau function disconnect` <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>
+## `#!luau function light.disconnect`
 
-```luau
+```luau title='<span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>'
 function disconnect<T>(
    message: Message<T>
 ) -> (

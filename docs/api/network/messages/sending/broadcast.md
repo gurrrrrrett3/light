@@ -11,9 +11,9 @@ lower memory impact.(1)
     learn more about how Light dynamically groups streams for broadcasting, check out
     [The Internals Blog](../../../../blog/internals/dynamic_streams.md) on the topic.
 
-## `#!luau function broadcast` <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>
+## `#!luau function light.broadcast`
 
-```luau
+```luau title='<span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>'
 function broadcast<T>(
     message: Message<T>,
     to: Player | { Player },

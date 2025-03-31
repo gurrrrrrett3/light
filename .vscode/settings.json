@@ -4,6 +4,8 @@
         "MD033": false,
         // Multiple top level headers
         "MD025": false,
+        // Duplicate Headers
+        "MD024": false,
         // Indentation Codeblocks Thingy
         "MD046": false
     },

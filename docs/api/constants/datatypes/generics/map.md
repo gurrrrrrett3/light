@@ -9,9 +9,9 @@ You can define a valid map Datatype using a simple table, just like luau:
 local some_map = { [light.str()] = light.u8 }
 ```
 
-## `#!luau function map` <span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--shared">Shared</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>
+## `#!luau function light.map`
 
-```luau
+```luau title='<span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--shared">Shared</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>'
 function map<Key, Value>(
     key: Datatype<Key>,
     value: Datatype<Value>,

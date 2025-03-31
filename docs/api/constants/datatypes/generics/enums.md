@@ -4,17 +4,17 @@ An enum represents a set of possible values. Because of limitations with string 
 enums you will need to [typecast](https://luau.org/typecheck#type-casts) into a
 [string singleton type](https://luau.org/typecheck#singleton-types-aka-literal-types).
 
-## `#!luau function enum` <span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--shared">Shared</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>
+!!! info "Light's enum types are generally only available in the [Luau Inference Engine V2](https://devforum.roblox.com/t/new-type-solver-beta/3155804)."
 
-```luau
+    You can still encode them, but type information will need to be provided more explicitly.
+
+## `#!luau function light.enum`
+
+```luau title='<span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--shared">Shared</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>'
 function enum<Identifier>(
     identifiers: { Identifier }
 ): Datatype<Identifier>
 ```
-
-!!! tip "Light's tagged enums are generally only available in the [Luau Inference Engine V2](https://devforum.roblox.com/t/new-type-solver-beta/3155804)."
-
-    Identifier enums do not have this restriction.
 
 ```luau
 function enum<IdentifierName, Identifier, T>(

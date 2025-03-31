@@ -8,9 +8,9 @@ massive performance gains.
 1. To learn more about how Light's String Pointers work, check out
    [The Internals Blog](../../../../blog/internals/string_pointers.md) on the topic.
 
-## `#!luau function strptr` <span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--shared">Shared</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>
+## `#!luau function light.strptr`
 
-```luau
+```luau title='<span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--shared">Shared</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>'
 function strptr(
     length: Datatype<number>?
 ): Datatype<string>

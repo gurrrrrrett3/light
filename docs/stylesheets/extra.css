@@ -1,3 +1,19 @@
+/* Resize Logo */
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+    fill:currentcolor;
+    display:block;
+    height:1.9rem;
+    width:auto
+}
+
+/* codeblock corners */
+
+.highlight span.filename {
+    border-top-left-radius:.55rem;
+    border-top-right-radius:.55rem;
+}
 
 /* dragons admonition */
 
@@ -42,7 +58,7 @@
 /* tags */
 
 .md-tag.md-tag--server {
-	background: #3d6aff;
+	background: #6485f3;
 	color: #ffffff;
 
 	&::before {
@@ -60,7 +76,7 @@
 }
 
 .md-tag.md-tag--shared {
-	background: #4527a0;
+	background: #6d54bb;
 	color: #ffffff;
 
 	&::before {
@@ -69,7 +85,7 @@
 }
 
 .md-tag.md-tag--async {
-	background: #ff8f00;
+	background: #ffa32c;
 	color: #ffffff;
 
 	&::before {
@@ -78,7 +94,7 @@
 }
 
 .md-tag.md-tag--sync {
-	background: #8abb26;
+	background: #9bd32b;
 	color: #ffffff;
 
 	&::before {
@@ -87,7 +103,7 @@
 }
 
 .md-tag.md-tag--experimental {
-	background: #4527a0;
+	background: #6d54bb;
 	color: #ffffff;
 
 	&::before {
@@ -96,7 +112,7 @@
 }
 
 .md-tag.md-tag--errors {
-	background: #ff1744;
+	background: #ff3860;
 	color: #ffffff;
 
 	&::before {
