@@ -4,13 +4,13 @@ This part of the documentation is for light's user-facing APIs.
 
 ## Tags Reference
 
-### <span class="md-tag md-tag-icon md-tag--server">Server</span> { id="tag-server" data-toc-label="Server" }
-
-This can be called on the server: `#!luau require(ReplicatedStorage.light).server`
-
 ### <span class="md-tag md-tag-icon md-tag--client">Client</span> { id="tag-client" data-toc-label="Client" }
 
 This can be called on the client: `#!luau require(ReplicatedStorage.light).client`
+
+### <span class="md-tag md-tag-icon md-tag--server">Server</span> { id="tag-server" data-toc-label="Server" }
+
+This can be called on the server: `#!luau require(ReplicatedStorage.light).server`
 
 ### <span class="md-tag md-tag-icon md-tag--shared">Shared</span> { id="tag-shared" data-toc-label="Shared" }
 
