@@ -1,5 +1,3 @@
-# <a href="/light/api/#tag-client" target="_blank"><!-- b:client --></a>
-
 # Derived from mkdocs-material's shortcodes: https://raw.githubusercontent.com/squidfunk/mkdocs-material/3cc0a30f6735e71a9f9262dc871419f7792628e5/src/overrides/hooks/shortcodes.py
 
 import posixpath
