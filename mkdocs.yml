@@ -150,6 +150,8 @@ plugins:
         - Experimental
         - Internal
 
+  - typeset
+
 nav:
   - Home: index.md
   - Quick Start / Get Started:
