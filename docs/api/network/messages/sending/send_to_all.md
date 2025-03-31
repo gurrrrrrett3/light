@@ -3,7 +3,7 @@
 Send To All function similarly to calling [`#!luau light.send()`](./send.md) on each player in the server, but will only
 need to serialize once.
 
-!!! info "You should usually prefer [`#!luau light.broadcast_to_all()`](./broadcast_to_all.md) over [`#!luau light.send_to_all()`](./send_to_all.md)"
+!!! tip "You should usually prefer [`#!luau light.broadcast_to_all()`](./broadcast_to_all.md) over [`#!luau light.send_to_all()`](./send_to_all.md)"
 
     This is because the latter can take up more memory. Light "broadcasts" can save memory by writing data to a single
     stream and batching it to relevant players instead of writing to a single stream and copying it for each player. To

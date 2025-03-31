@@ -8,7 +8,7 @@ bounds or cause other unexpected internal issues. If you don't know what that im
 [`#!luau light.connect()`](./connect.md), this function exists for optimizing frequently fired events in potentially
 large servers (or memory usage).
 
-!!! info "This function can error if there is already a callback connected."
+!!! tip "This function can error if there is already a callback connected."
 
     Consider calling [`#!luau light.disconnect()`](./disconnect.md) first if this is an issue.
 

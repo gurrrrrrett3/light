@@ -12,7 +12,7 @@ function enum<Identifier>(
 ): Datatype<Identifier>
 ```
 
-!!!info "Light's tagged enums are generally only available in the [Luau Inference Engine V2](https://devforum.roblox.com/t/new-type-solver-beta/3155804)."
+!!! tip "Light's tagged enums are generally only available in the [Luau Inference Engine V2](https://devforum.roblox.com/t/new-type-solver-beta/3155804)."
 
     Identifier enums do not have this restriction.
 

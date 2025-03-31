@@ -5,7 +5,7 @@ connect your messages into a choice signal implementation. Callbacks can be remo
 [`#!luau light.disconnect()`](./disconnect.md). Message callbacks will be spawned asynchronously with thread reuse, to
 create a non-yielding callback you can use [`#!luau light.connect_sync()`](./connect_sync.md)
 
-!!! info "This function can error if there is already a callback connected."
+!!! tip "This function can error if there is already a callback connected."
 
     Consider calling [`#!luau light.disconnect()`](./disconnect.md) first if this is an issue.
 

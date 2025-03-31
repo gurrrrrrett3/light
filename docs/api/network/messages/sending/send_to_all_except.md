@@ -3,7 +3,7 @@
 Send To All Except is identical to calling [`#!luau light.send()`](./send.md) to all players except a player or
 list of players.
 
-!!! info "You should usually prefer [`#!luau light.broadcast_to_all_except()`](./broadcast_to_all_except.md) over [`#!luau light.send_to_all_except()`](./send_to_all_except.md)"
+!!! tip "You should usually prefer [`#!luau light.broadcast_to_all_except()`](./broadcast_to_all_except.md) over [`#!luau light.send_to_all_except()`](./send_to_all_except.md)"
 
     This is because the latter can take up more memory. Light "broadcasts" can save memory by writing data to a single
     stream and batching it to relevant players instead of writing to a single stream and copying it for each player. To
