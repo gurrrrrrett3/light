@@ -28,7 +28,7 @@ parameter.
 
 !!! info "It's worth noting that Light's unit enums can also hold information for things other than text if needbe."
 
-!!! danger "Encoding will not do a deep equality check. If a value isn't **literally** an option in the unit enum, it will error when you try to encode."
+!!! danger "Encoding will not do a deep equality check. If a value isn't literally an option in the unit enum, it will error when you try to encode."
 
 ```luau
 local state = light.enum({
