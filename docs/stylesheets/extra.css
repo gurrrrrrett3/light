@@ -213,10 +213,13 @@ h6 {
     position: relative;
     z-index: 100;
     
-    transition: 0.2s;
-    -webkit-box-shadow:0px 0px 93px 5px var(--md-tag-color);
-    -moz-box-shadow: 0px 0px 93px 5px var(--md-tag-color);
-    box-shadow: 0px 0px 93px 5px var(--md-tag-color);
+    transition: 0.3s;
+    -webkit-box-shadow:0px 0px 80px 4.5px var(--md-tag-color);
+    -moz-box-shadow: 0px 0px 80px 4.5px var(--md-tag-color);
+    box-shadow: 0px 0px 80px 4.5px var(--md-tag-color);
+}
+.md-tag.md-tag {
+    transition: 0.5s;
 }
 
 /* badges from mkdocs material */
