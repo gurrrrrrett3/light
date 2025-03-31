@@ -1,4 +1,16 @@
-# What is a message?
+# How do I get started?
+
+For now, I'm going to place light's `ModuleScript` in `ReplicatedStorage`.
+There are three ways to use light:
+
+- `#!luau local light = require(ReplicatedStorage.light).shared`
+   This should be used when defining messages in a `ModuleScript`
+- `#!luau local light = require(ReplicatedStorage.light).client`
+   This should be used when sending or recieving messages on the client. I.e., inside a `LocalScript`.
+- `#!luau local light = require(ReplicatedStorage.light).server`
+   This should be used for sending/recieving messages on the server. I.e., inside a `Script`.
+
+## What is a message?
 
 "Message" is light's chosen terminology for an event which can be fired to and from the server, and connected with a
 single callback.
@@ -7,9 +19,7 @@ single callback.
 
 The recommended way to create messages in light is with a simple ModuleScript.
 
-`ReplicatedStorage.messages` ModuleScript:
-
-```luau
+```luau title="ReplicatedStorage.messages (ModuleScript)"
 local light = require(ReplicatedStorage.light).shared
 
 local container = light.container({
@@ -31,11 +41,10 @@ to get it out of the way. This will initialize roblox RemoteEvent connections, s
 
 ## Sending Messages from Client to Server
 
-To send a message from the client to the server, use `light.send(message, data)`
+To send a message from the client to the server, use
+[`#!luau light.send(message, data)`](../api/network/messages/sending/send.md)
 
-`StarterPlayerScripts.client` LocalScript:
-
-```luau
+```luau title="StarterPlayerScripts.client (LocalScript)"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local light = require(ReplicatedStorage.light).client
@@ -46,11 +55,10 @@ light.send(messages.ping)
 
 ## Listening For Messages on The Server
 
-Now, we need somewhere to listen for this message. The way to listen for a message being fired is with `light.connect(message, callback)`
+Now, we need somewhere to listen for this message. The way to listen for a message being fired is with
+[`#!luau light.connect(message, callback)`](../api/network/messages/listening/connect.md)
 
-`ServerScriptService.server` Script:
-
-```luau
+```luau title="ServerScriptService.server (Script)"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local light = require(ReplicatedStorage.light).server
@@ -63,9 +71,10 @@ end)
 
 ## Sending Messages from Server to Client
 
-With `light.send`, we can modify our `ServerScriptService.server` Script from before to respond to ping:
+With [`#!luau light.send()`](../api/network/messages/sending/send.md), we can modify our Script from before to respond
+to ping:
 
-```luau
+```luau title="ServerScriptService.server (Script)"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local light = require(ReplicatedStorage.light).server
@@ -78,9 +87,9 @@ end)
 
 ## Listening to Messages on The Client
 
-Now let's change our `StarterPlayerScripts.client` LocalScript from before to listen to the server's response:
+Now let's change our LocalScript to listen to the server's response:
 
-```luau
+```luau title="StarterPlayerScripts.client (LocalScript)"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local light = require(ReplicatedStorage.light).client

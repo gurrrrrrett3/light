@@ -5,7 +5,9 @@ connect your messages into a choice signal implementation. Callbacks can be remo
 [`#!luau light.disconnect()`](./disconnect.md). Message callbacks will be spawned asynchronously with thread reuse, to
 create a non-yielding callback you can use [`#!luau light.connect_sync()`](./connect_sync.md)
 
-## `#!luau function connect` <span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>
+!!! info "This function can error if there is already a callback connected. Consider calling [`#!luau light.disconnect()`](./disconnect.md) first if this is an issue."
+
+## `#!luau function connect` <span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span> <span class="md-tag md-tag-icon md-tag--errors">Errors</span>
 
 ```luau
 function connect<T>(
@@ -14,7 +16,7 @@ function connect<T>(
 ): ()
 ```
 
-## `#!luau function connect` <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>
+## `#!luau function connect` <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span> <span class="md-tag md-tag-icon md-tag--errors">Errors</span>
 
 ```luau
 function connect<T>(

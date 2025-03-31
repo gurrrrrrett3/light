@@ -79,6 +79,9 @@ theme:
       experimental: material/flask
       internal: material/eye-off
 
+extra_css:
+  - stylesheets/extra.css
+
 extra:
   tags:
     Server: server
@@ -132,7 +135,7 @@ nav:
   - Home: index.md
   - Quick Start / Get Started:
       - Install: quick-start/installation.md
-      - Messages: quick-start/messages.md
+      - Beginner's Guide: quick-start/start_guide.md
   - API Docs:
       - API Documentation: api/index.md
       - Init: api/init.md

@@ -8,7 +8,9 @@ bounds or cause other unexpected internal issues. If you don't know what that im
 [`#!luau light.connect()`](./connect.md), this function exists for optimizing frequently fired events in potentially
 large servers (or memory usage).
 
-## `#!luau function connect_sync` <span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>
+!!! info "This function can error if there is already a callback connected. Consider calling [`#!luau light.disconnect()`](./disconnect.md) first if this is an issue."
+
+## `#!luau function connect_sync` <span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span> <span class="md-tag md-tag-icon md-tag--errors">Errors</span>
 
 ```luau
 function connect_sync<T>(
@@ -17,7 +19,7 @@ function connect_sync<T>(
 ): ()
 ```
 
-## `#!luau function connect_sync` <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>
+## `#!luau function connect_sync` <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span> <span class="md-tag md-tag-icon md-tag--errors">Errors</span>
 
 ```luau
 function connect_sync<T>(

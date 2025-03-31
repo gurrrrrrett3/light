@@ -33,14 +33,4 @@ Players.PlayerAdded:Connect(function(player)
 end)
 ```
 
-### Note about [`#!luau light.send()`](./send.md) (On the server)
-
-You should almost always prefer
-[`#!luau light.broadcast()`](./broadcast.md). Sending to a list of players is much more memory-efficient with
-[`#!luau light.broadcast()`](./broadcast.md), because it operates on different logic.(1)
-{.annotate}
-
-1. Light "broadcasts" can save on memory by writing data to a single stream and sending it to all players instead of
-   writing to a single stream and copying it to each player. This process is done through stream queries internally. To
-   learn more about how Light dynamically groups streams for broadcasting, check out
-   [The Internals Blog](../../../../blog/internals/dynamic_streams.md) on the topic.
+!!! info "On the server, you should usually prefer [`#!luau light.broadcast`](./broadcast.md) over [`#!luau light.send()`](./send.md), because the latter can take up more memory. Light "broadcasts" can save memory by writing data to a single stream and batching it to relevant players instead of writing to a single stream and copying it for each player. To learn more, check out [The Internals Blog](../../../../blog/internals/dynamic_streams.md) on the topic."
