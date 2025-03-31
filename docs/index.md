@@ -1,6 +1,6 @@
 # Home
 
-Light is a *light*weight, secure, modern networking library for roblox. Read below, or [get started](quick-start/installation.md).
+Light is a *light*weight, secure, modern networking library for roblox. Read below, or [get started](quick-start/index.md).
 
 ## What Light does
 
