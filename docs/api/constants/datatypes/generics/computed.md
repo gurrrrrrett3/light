@@ -1,10 +1,13 @@
 # Computed Datatypes
 
 Computed [Datatypes](../index.md) are similar to [`#!luau light.literal()`](./literal.md) and
-[`#!luau light.enum()`](./enums.md), except they are a function which returns a [Datatype](../index.md). These can be
-dangerous, as they introduce conditionality to serialization if used incorrectly. They are mostly useful for
-<a href="https://en.wikipedia.org/wiki/Linked_list" target="_blank">LinkedList</a>, and are best paired with
+[`#!luau light.enum()`](./enums.md), except they are a function which returns a [Datatype](../index.md). They are mostly
+useful for <a href="https://en.wikipedia.org/wiki/Linked_list" target="_blank">LinkedList</a>, and are best paired with
 [Cached Datatypes](./cached.md).
+
+!!! danger "Introducing external conditionality to serialization / deserialization can be dangerous. Please be careful."
+
+!!! danger "You should never fire any event from within [`#!luau light.computed()`](./computed.md)'s lambda callback(s). This is considered undefined behavior."
 
 ## `#!luau function computed` <span class="md-tag md-tag-icon md-tag--client">Client</span> <span class="md-tag md-tag-icon md-tag--server">Server</span> <span class="md-tag md-tag-icon md-tag--shared">Shared</span> <span class="md-tag md-tag-icon md-tag--sync">Synchronous</span>
 
@@ -16,13 +19,12 @@ function computed<Output>(
 
 ```luau
 function computed<Output>(
-   ser: (Output) -> (Datatype<Output>),
-   des: (buff: buffer, buff_ptr: number): (Datatype<Output>, number)
+   ser: (buff: buffer, byte_ptr: number, data: any) -> (Datatype<Output>, number),
+   des: (buff: buffer, byte_ptr: number) -> (Datatype<Output>, number)
 ): Datatype<Output>
 ```
 
-It can also be called with two arguments as shown above for more precise control over logic. The number return is for
-the new buffer byte ptr.
+!!! info "[`#!luau light.computed()`](./computed.md) can also be called with two arguments as shown above for more precise control over logic, returning a number for the new buffer byte ptr. If used correctly, you could use this to re-implement custom dynamic types such as [Enums](./enums.md)."
 
 An example <a href="https://en.wikipedia.org/wiki/Linked_list" target="_blank">LinkedList</a> [Datatype](../index.md)
 using [`#!luau light.computed()`](./computed.md) and [Cached Datatypes](./cached.md):
