@@ -43,7 +43,7 @@ local state = light.enum({
 
     If an identifier isn't "literally" an option in the enum, it will error when you try to encode.
 
-Another way you could use a Identifier Enum, this time with instances:
+Another way you could use an Identifier Enum, this time with instances:
 
 ```luau
 local assets = ReplicatedStorage:WaitForChild("assets")
