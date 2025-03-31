@@ -39,4 +39,4 @@ return light.container({
 }, "some-cool-namespace")
 ```
 
-You can replicate the above code 1:1 with [`#!luau light.message()`](./message.md)
+!!! info "You can replicate the above code 1:1 with [`#!luau light.message()`](./message.md)"
