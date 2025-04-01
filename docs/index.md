@@ -15,7 +15,7 @@ Light is a *light*weight, secure, and modern remote wrapper for roblox. Read bel
 
 - Lets you broadcast large unreliable messages for tasks such as character replication or neck cframes.
 
-- Works with no plugin. Light can be downloaded and used out-of-the-box.
+- Works with no plugin or compiler. Light can be downloaded and used out-of-the-box.
 
 - Handles all the RemoteEvent instances for you reliably.
 
@@ -41,7 +41,8 @@ No. Roblox does batching on its own, light does batching to group messages toget
 
 ### Q: Is event order the same as roblox?
 
-No. Messages will be ordered per-message. This means that in an environment where you:
+No. Messages will be ordered per-message. This means that in an environment where you send 2 kinds of messages, you may
+end up with 2 contiguous lists of calls for each type.
 
 ```luau
 send(message_a)
@@ -49,7 +50,8 @@ send(message_b)
 send(message_a)
 ```
 
-The other side will recieve message_a, then message_a, followed by message_b.
+The other side will recieve the first call to message a, the second call to message a, and then the call(s) to message
+b.
 
 ### Q: Why only allow one callback?
 
