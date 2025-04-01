@@ -202,7 +202,7 @@ nav:
               - Computed: api/constants/datatypes/generics/computed.md
               - Buffer: api/constants/datatypes/generics/buff.md
           - Bool: api/constants/datatypes/bool.md
-          - Unkown: api/constants/datatypes/unknown.md
+          - Unknown: api/constants/datatypes/unknown.md
           - Instance: api/constants/datatypes/instance.md
       - Step Replication: api/step_replication.md
   - Performance:
