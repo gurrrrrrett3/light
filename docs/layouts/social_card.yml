@@ -22,7 +22,8 @@ definitions:
 
 size: { width: 1200, height: 630 }
 layers:
-  - background:
+  - size: { width: 630, height: 630 }
+    background:
       image: docs/assets/images/light.png
 
   - size: { width: 832, height: 310 }
@@ -36,7 +37,7 @@ layers:
         amount: 3
         height: 1.25
       font:
-        family: Alegreya
+        family: Noto Serif
         style: Bold
 
   - size: { width: 832, height: 64 }
