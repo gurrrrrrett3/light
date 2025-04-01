@@ -31,11 +31,41 @@
 [data-md-color-scheme="default"] {
     --md-default-fg-color: #000000 !important;
     --fg-color: 0, 0, 0;
+
+    .md-tag.md-tag:hover,
+    .md-tag.md-tag {
+        position: relative;
+        z-index: 1;
+        transition: 0.5s;
+
+        background: var(--md-tag-color);
+        color: #fafafa;
+        text-shadow: 1px 1px #2a2a2aa1;
+
+        &::before {
+            background-color: #fafafa;
+        }
+    }
 }
 
 [data-md-color-scheme="slate"] {
     --md-default-fg-color: #ffffff !important;
     --fg-color: 255, 255, 255;
+    
+    .md-tag.md-tag:hover,
+    .md-tag.md-tag {
+        position: relative;
+        z-index: 1;
+        transition: 0.5s;
+
+        background: var(--md-tag-color);
+        color: #323232;
+        text-shadow: none;
+
+        &::before {
+            background-color: #323232;
+        }
+    }
 }
 
 .md-search__form {
@@ -137,60 +167,38 @@ h6 {
 
 .md-tag.md-tag--server {
     --md-tag-color: #6485f3;
-    background: var(--md-tag-color);
 }
 
 .md-tag.md-tag--client {
     --md-tag-color: #ffb0ff;
-    background: var(--md-tag-color);
 }
 
 .md-tag.md-tag--shared {
-    --md-tag-color: #f3d964;
-    background: var(--md-tag-color);
+    --md-tag-color: #32905f;
 }
 
 .md-tag.md-tag--async {
     --md-tag-color: #ffa32c;
-    background: var(--md-tag-color);
 }
 
 .md-tag.md-tag--sync {
     --md-tag-color: #9bd32b;
-    background: var(--md-tag-color);
 }
 
 .md-tag.md-tag--experimental {
     --md-tag-color: #6d54bb;
-    background: var(--md-tag-color);
 }
 
 .md-tag.md-tag--errors {
-    --md-tag-color: #ff3860;
-    background: var(--md-tag-color);
+    --md-tag-color: #ff5779;
 }
 
 .md-tag.md-tag--internal {
-    --md-tag-color: #000000;
-    color: var(--md-default-fg-color)
+    --md-tag-color: #bababa;
 }
 
 /* tag hover behavior*/
 
-.md-tag.md-tag:hover,
-.md-tag.md-tag {
-    position: relative;
-    z-index: 1;
-    transition: 0.5s;
-    text-shadow: 1px 1.5px #3b3b3b63;
-
-    background: var(--md-tag-color);
-    color: #ffffff;
-
-    &::before {
-        background-color: #ffffff;
-    }
-}
 .md-tag.md-tag:hover {
     cursor: pointer;
     
