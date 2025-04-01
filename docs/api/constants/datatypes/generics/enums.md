@@ -68,7 +68,7 @@ return light.container({
 
 ## Tagged Enums
 
-Tagged enums are a set of structs, with the first parameter for an identifier name. Here's an example `mouse_event`:
+Passing the first parameter to [`#!luau light.enum()`](./enums.md) represents a tagged enum type. Tagged enums are a set of structs, and the first parameter is the name for an identifier field. Here's an example `mouse_event`:
 
 ```luau
 local mouse_event = light.enum("type", {
