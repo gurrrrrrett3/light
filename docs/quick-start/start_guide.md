@@ -1,7 +1,7 @@
 # How do I get started?
 
-For now, I'm going to place light's `ModuleScript` in `ReplicatedStorage`.
-There are three ways to use light:
+For now, I'm going to place light's `ModuleScript` in `ReplicatedStorage`, but you can place it anywhere.
+There are three ways to use light's functions, properties, etc:
 
 - `#!luau local light = require(ReplicatedStorage.light).shared`
    This should be used when defining messages in a `ModuleScript`
