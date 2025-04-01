@@ -2,9 +2,9 @@
 
 Arrays are quite simple.
 <br>Arrays in light represent a contiguous list of "things", just like luau.
-<br>An example of a contiguous array would be `#!luau {"Hello", " ", "World!"}`.
-These shouldn't have nils or any "gaps" in them, unless the [Datatype](../index.md) provided is optional. If you want
-"holes" or nils in your array, you should use [Maps](./map.md) or [Optional Values](./optional.md).
+<br>An example of a contiguous array value would be `#!luau {"Hello", " ", "World!"}`.
+It shouldn't have any `#!luau nil`s or "gaps", unless the [Datatype](../index.md) provided is optional. If you want
+holes in your array, use [Maps](./map.md) or [Optional Values](./optional.md).
 
 You can define a valid array [Datatype](../index.md) using a simple table, just like luau:
 
