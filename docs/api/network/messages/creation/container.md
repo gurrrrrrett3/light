@@ -5,8 +5,7 @@ ByteNet's namespaces, if you're familiar.
 
 Container inputs should be a map of string message-names to any valid [Datatype](../../../constants/datatypes/index.md).
 This includes [Datatypes](../../../constants/datatypes/index.md) like arrays or maps being defined with luau tables like
-`#!luau { light.u8 }` for example. Including [Datatypes](../../../constants/datatypes/index.md) defined with luau tables
-in this API is by design, and meant to make defining messages easy.
+`#!luau { light.u8 }` for example.
 
 !!! info "If messages inside are already synchronized beforehand, the container will not yield."
 
