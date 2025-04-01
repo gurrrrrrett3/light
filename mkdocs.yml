@@ -213,6 +213,22 @@ nav:
           - Unknown: api/constants/datatypes/unknown.md
           - Instance: api/constants/datatypes/instance.md
       - Step Replication: api/step_replication.md
+      - Internal API:
+          - api/internals/index.md
+          - Datatypes:
+              - New Type: api/internals/datatypes/new_type.md
+              - Make Number: api/internals/datatypes/make_number.md
+          - I/O:
+              - Writer:
+                  - Writer: api/internals/io/writer/index.md
+                  - From Size: api/internals/io/writer/writer_from_size.md
+                  - From Buff: api/internals/io/writer/writer_from_buff.md
+                  - Get Size: api/internals/io/writer/get_writer_size.md
+                  - Get Buff: api/internals/io/writer/get_writer_buff.md
+                  - Try Realloc: api/internals/io/writer/try_realloc.md
+              - Input: api/internals/io/input.md
+              - Output: api/internals/io/output.md
+          - Get Holy: api/internals/get_holy.md
   - Performance:
       - Performance: blog/performance/index.md
   - Internals Blog:
