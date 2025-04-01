@@ -6,8 +6,8 @@ Inline documentation follows these rules:
 - Follow your discretion when styling inline docs. Punctuation and grammar is preferred for large or important comments,
 but you shouldn't need to think about these rules much. I can't promise I always follow them to a T myself. If a PR
 comes in and they aren't followed to my liking, there's a good chance I'll fix it myself. (feel free to comment on pr if
-you have reasoning for breaking such rules, or believe they should be changed.) Also feel free to contribute styling
-changes / fixes in a PR with appropriate tags.
+you have reasoning for breaking such rules, or make a pr here if you believe they should be changed.) Also feel free to contribute styling
+changes / fixes in a PR or issue with appropriate tags.
 
 - Light is not designed for moonwave or other docgen in mind. This decision was made because I find it inconvenient and
 prefer to use mkdocs for the site.
