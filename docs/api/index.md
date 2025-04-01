@@ -35,6 +35,6 @@ This part of the API is considered experimental for now, and may change or be re
 
 ### <!-- b:internal -->
 
-The internals of Light are exposed in some user-facing APIs. However, they should never be necessary for an ordinary
-user. Instead, they are present for people developing "extensions", or light itself. Internal APIs are subject to more
-frequent breaking changes.
+The internals of Light are exposed in some user-facing APIs. However, they should never be necessities for ordinary users.
+Instead, they are present for people developing "extensions", "add-ons", or light itself. Internal APIs are subject
+to more frequent breaking changes.
