@@ -1,4 +1,29 @@
 {
+    // formatter
+
+    "[luau]": {
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "JohnnyMorganz.stylua"
+	},
+
+    // new solver
+
+    "luau-lsp.completion.enableFragmentAutocomplete": true,
+	"luau-lsp.fflags.override": {
+		"LuauSolverV2": "true",
+		"LuauTypeSolverRelease": "2000",
+		"LuauNewSolverPopulateTableLocations": "true",
+		"LuauNewSolverPrePopulateClasses": "true"
+	},
+
+    // vector defs, temporary fix TODO remove
+
+	"luau-lsp.types.definitionFiles": [
+		".vscode/vector_types.d.luau",
+	],
+
+    // MD linter config for docs
+
     "markdownlint.config": {
         // Inline HTML
         "MD033": false,
@@ -9,6 +34,8 @@
         // Indentation Codeblocks Thingy
         "MD046": false
     },
+
+    // wretched 4 tabsize
 
     "editor.tabSize": 4,
     "editor.detectIndentation": false
