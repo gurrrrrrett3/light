@@ -29,8 +29,7 @@ Light is similar to these, but will require some work to migrate to/from.
 - Secure your messages for you. Static serialization ensures you get the types you expect, but the data can still be manipulated by exploiters.
 
 - Provide a built-in signal implementation.
-Light messages can be connected or disconnected with a single callback, and no more. For convenience, a thread reuse
-implementation is packaged out-of-the-box with [`light.connect()`](./api/network/messages/listening/connect.md)
+Light messages can only be connected or disconnected with a single callback. For convenience, a thread reuse implementation is packaged out-of-the-box with [`light.connect()`](./api/network/messages/listening/connect.md)
 [why?](#q-why-only-allow-one-callback)
 
 ## FAQ / Q&A
@@ -55,8 +54,7 @@ b.
 
 ### Q: Why only allow one callback?
 
-I personally don't use multiple callbacks for events. If you do, you can make your callback spawn a signal
-implementation or BindableEvent. The way I see it, there's no reason for me to include bloat like a signal in the base
+"Message" in Light indicates that there's an intended target. I rarely see a use multiple callbacks for events. If you do, you can make your callback spawn a BindableEvent or signal. The way I see it, there's no reason for me to include bloat like a signal in the base
 library. If you're interested in event profiling, the docs for [`#!luau light.disconnect()`](./api/network/messages/listening/disconnect.md) have a decent example of an event profiler.
 
 ### Q: Where can I find holy?
