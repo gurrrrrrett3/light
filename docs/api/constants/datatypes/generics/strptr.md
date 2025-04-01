@@ -1,8 +1,8 @@
 # String Pointers
 
-Behaves identically to [`#!luau light.str()`](./str.md), except the datatype is static, will not serialize duplicates,
-and allocated per-stream.(1) This functionally means repeating the same "arbitrary" string multiple times in a frame has
-massive performance gains.
+Behaves identically to [`#!luau light.str()`](./str.md), except the datatype will not serialize duplicates, and the
+datatype has a fixed size internally.(1) This functionally means repeating the same "arbitrary" string multiple times in
+a frame has significant performance and bandwidth gains.
 {.annotate}
 
 1. To learn more about how Light's String Pointers work, check out
