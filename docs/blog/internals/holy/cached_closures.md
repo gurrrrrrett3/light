@@ -3,15 +3,15 @@
 Caching closures is a basic optimization
 [Holy](https://github.com/hardlyardi/holy) and
 [Squash](https://github.com/Data-Oriented-House/Squash)
-to work with "generic" [Datatypes](../../../api/constants/datatypes/index.md).(1) It works generally by storing an
+to work with "generic" [Datatypes](../../../api/datatypes/index.md).(1) It works generally by storing an
 "input" index based on parameters, and saving the result shape ID. This caching system is important to make sure memory
 usage stays low (by not creating new serialization/deserialization functions), and to prevent ser/de IDs from getting
-out of hand in size. As an example, here's the [vect caching](../../../api/constants/datatypes/generics/vect.md)
+out of hand in size. As an example, here's the [vect caching](../../../api/datatypes/generics/vect.md)
 {.annotate}
 
-1. Generic [Datatypes](../../../api/constants/datatypes/index.md) are
-functions which take in [Datatype(s)](../../../api/constants/datatypes/index.md) and return a
-[Datatype](../../../api/constants/datatypes/index.md)
+1. Generic [Datatypes](../../../api/datatypes/index.md) are
+functions which take in [Datatype(s)](../../../api/datatypes/index.md) and return a
+[Datatype](../../../api/datatypes/index.md)
 
 ```luau
 local vect3_shape_cache = {} :: { [Shape<any>]: Shape<any> } --(1)!
@@ -35,4 +35,4 @@ end
 2. Cache the input type with the created vector id
 
 Although caching is already done automatically for most things, there is an API for
-[caching a datatype instantly as a numeric ID](../../../api/constants/datatypes/generics/cached.md).
+[caching a datatype instantly as a numeric ID](../../../api/datatypes/generics/cached.md).

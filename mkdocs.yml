@@ -187,32 +187,32 @@ nav:
               - disconnect: api/network/messages/listening/disconnect.md
               - connect_sync: api/network/messages/listening/connect_sync.md
       - Datatypes:
-          - Datatypes: api/constants/datatypes/index.md
+          - Datatypes: api/datatypes/index.md
           - Numbers:
-              - Unsigned Integers: api/constants/datatypes/numbers/uints.md
-              - Signed Integers: api/constants/datatypes/numbers/ints.md
-              - Floating Points: api/constants/datatypes/numbers/floats.md
+              - Unsigned Integers: api/datatypes/numbers/uints.md
+              - Signed Integers: api/datatypes/numbers/ints.md
+              - Floating Points: api/datatypes/numbers/floats.md
           - Generic Datatypes:
               - Tables:
-                  - Table Datatypes: api/constants/datatypes/generics/tables/index.md
-                  - Array: api/constants/datatypes/generics/tables/arr.md
-                  - Map: api/constants/datatypes/generics/tables/map.md
-                  - Struct: api/constants/datatypes/generics/tables/struct.md
-              - Vect: api/constants/datatypes/generics/vect.md
-              - Vect2: api/constants/datatypes/generics/vect2.md
-              - Vector2: api/constants/datatypes/generics/vector2.md
-              - Literal: api/constants/datatypes/generics/literal.md
-              - Range: api/constants/datatypes/generics/range.md
-              - Enums: api/constants/datatypes/generics/enums.md
-              - Optional: api/constants/datatypes/generics/optional.md
-              - String: api/constants/datatypes/generics/str.md
-              - String Pointer: api/constants/datatypes/generics/strptr.md
-              - Cached Datatypes: api/constants/datatypes/generics/cached.md
-              - Computed: api/constants/datatypes/generics/computed.md
-              - Buffer: api/constants/datatypes/generics/buff.md
-          - Bool: api/constants/datatypes/bool.md
-          - Unknown: api/constants/datatypes/unknown.md
-          - Instance: api/constants/datatypes/instance.md
+                  - Table Datatypes: api/datatypes/generics/tables/index.md
+                  - Array: api/datatypes/generics/tables/arr.md
+                  - Map: api/datatypes/generics/tables/map.md
+                  - Struct: api/datatypes/generics/tables/struct.md
+              - Vect: api/datatypes/generics/vect.md
+              - Vect2: api/datatypes/generics/vect2.md
+              - Vector2: api/datatypes/generics/vector2.md
+              - Literal: api/datatypes/generics/literal.md
+              - Range: api/datatypes/generics/range.md
+              - Enums: api/datatypes/generics/enums.md
+              - Optional: api/datatypes/generics/optional.md
+              - String: api/datatypes/generics/str.md
+              - String Pointer: api/datatypes/generics/strptr.md
+              - Cached Datatypes: api/datatypes/generics/cached.md
+              - Computed: api/datatypes/generics/computed.md
+              - Buffer: api/datatypes/generics/buff.md
+          - Bool: api/datatypes/bool.md
+          - Unknown: api/datatypes/unknown.md
+          - Instance: api/datatypes/instance.md
       - Step Replication: api/step_replication.md
       - Debug API:
           - Debug: api/debug/index.md

@@ -1,6 +1,6 @@
 # Light's String Pointers
 
-[String pointers](../../api/constants/datatypes/generics/strptr.md) are a relatively simple & lightweight datatype. They
+[String pointers](../../api/datatypes/generics/strptr.md) are a relatively simple & lightweight datatype. They
 serve to save resources on serialization/deserialization of repeated "arbitrary" strings. This is done by holding onto
 an optional string pointer "index" for each [stream](./dynamic_streams.md). This looks something like:
 

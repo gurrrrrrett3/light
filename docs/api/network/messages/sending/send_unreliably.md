@@ -3,8 +3,8 @@
 Identical behavior to [`#!luau light.send()`](./send.md), except the event is
 <a href="https://create.roblox.com/docs/reference/engine/classes/UnreliableRemoteEvent" target="_blank">unreliable</a>.
 There is no size limit on light unreliable sending, however sending
-[instances](../../../constants/datatypes/instance.md) /
-[unknowns](../../../constants/datatypes/unknown.md) can cause it to fail.
+[instances](../../../datatypes/instance.md) /
+[unknowns](../../../datatypes/unknown.md) can cause it to fail.
 
 ## `#!luau function light.send_unreliably`
 

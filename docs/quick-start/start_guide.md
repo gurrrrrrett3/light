@@ -34,7 +34,7 @@ return container
 [`#!luau light.container(messages)`](../api/network/messages/creation/container.md) constructs a "list" of
 messages from the table provided so the messages can be used. The second parameter you see is the "namespace", which you
 shouldn't have to worry too much about.
-[`#!luau light.literal(nil)`](../api/constants/datatypes/generics/literal.md) means that the message doesn't
+[`#!luau light.literal(nil)`](../api/datatypes/generics/literal.md) means that the message doesn't
 contain any data, because it is literally `#!luau nil`. [`#!luau light.init()`](../api/init.md) can be called at any time, but it's best
 to get it out of the way. This will initialize roblox RemoteEvent connections, start stepping replication, etc. Calling
 [`#!luau light.init()`](../api/init.md) multiple times will have no additional impact.

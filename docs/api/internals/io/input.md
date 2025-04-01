@@ -14,7 +14,7 @@ function input<T>(
 )
 ```
 
-You'll need to provide a valid [Writer](./writer/index.md), [Datatype](../../constants/datatypes/index.md), and some
+You'll need to provide a valid [Writer](./writer/index.md), [Datatype](../../datatypes/index.md), and some
 data to serialize. You can deserialize the data with [Output](./output.md).
 
 !!! danger "The buffer may change"

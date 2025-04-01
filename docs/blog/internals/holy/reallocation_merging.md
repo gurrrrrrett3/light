@@ -28,9 +28,9 @@ local static_ser: { [Shape]: SerFunction }
 `#!luau static_ser` [SerFunction](./index.md)s won't try to resize any buffers, they serialize their raw data with
 no extra logic. Essentially, calling a `#!luau static_ser` [SerFunction](./index.md) internally means whoever is
 calling the function will take care of allocations. In practice, Holy is smart enough to dynamically create closures
-based on whether a generic input is static. [Structs](../../../api/constants/datatypes/generics/tables/struct.md) will
+based on whether a generic input is static. [Structs](../../../api/datatypes/generics/tables/struct.md) will
 merge all static fields first. If all fields of a struct are static, the struct itself becomes a static type with a size
-and `#!luau static_ser` [SerFunction](./index.md). [Arrays](../../../api/constants/datatypes/generics/tables/arr.md), and
-[Maps](../../../api/constants/datatypes/generics/tables/map.md) with Static Parameters will generate serde
+and `#!luau static_ser` [SerFunction](./index.md). [Arrays](../../../api/datatypes/generics/tables/arr.md), and
+[Maps](../../../api/datatypes/generics/tables/map.md) with Static Parameters will generate serde
 [special-cases](./special_cased_generics.md) to allocate the product of the data length with the static size of each
 item.
