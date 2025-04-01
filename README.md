@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="./docs/assets/images/light.png" class="center">
+</div>
+
 # Holy Light
 
 (Holy) Light is a lightweight, advanced, and modern Remote Event wrapper for Roblox.
