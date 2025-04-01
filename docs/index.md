@@ -11,7 +11,7 @@ Light is a *light*weight, secure, and modern remote wrapper for roblox. Read bel
 
 - Batching, to pack all of your data efficiently together each frame.
 
-- Serializes your data into buffers statically, so your types will be fully validated.
+- Serializes your data into buffers with static type validation, so you always get the **type** you expect.
 
 - Lets you broadcast large unreliable messages for tasks such as character replication or neck cframes.
 
