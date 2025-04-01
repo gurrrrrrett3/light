@@ -57,9 +57,7 @@ b.
 
 I personally don't use multiple callbacks for events. If you do, you can make your callback spawn a signal
 implementation or BindableEvent. The way I see it, there's no reason for me to include bloat like a signal in the base
-library. If you're interested in event profiling, check out the docs for
-[`#!luau light.disconnect()`](./api/network/messages/listening/disconnect.md). It has a pretty good example of a
-"template" event profiler.
+library. If you're interested in event profiling, the docs for [`#!luau light.disconnect()`](./api/network/messages/listening/disconnect.md) have a decent example of an event profiler.
 
 ### Q: Where can I find holy?
 
