@@ -9,5 +9,7 @@ function range(
 ): Datatype<number>
 ```
 
-Returns a number [Datatype](../index.md) which clamps to the given range. Minimum can be negative. Represented in memory
-as a static number with the minimum number of bytes for the full range.
+Returns a number [Datatype](../index.md) which clamps to the given range.(1) Minimum can be negative. The range clamping is fully validated.
+{.annotate}
+
+1. Represented in memory as a static uint with the minimum number of bytes for the full range. Writes to the buffer as `#!luau math.clamp(input, minimum, maximum) - minimum`.
