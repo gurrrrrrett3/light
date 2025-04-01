@@ -10,7 +10,7 @@ isn't one already, rendering it unusable for anything other than ser/des and eve
 
 ## `#!luau function light.cached`
 
-```luau title='<!-- b:client --> <!-- b:server --> <!-- b:shared --> <!-- b:sync -->'
+```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- sync -->'
 function cached<T>(
    value: Datatype<T>
 ): Datatype<T>

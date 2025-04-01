@@ -11,7 +11,7 @@ need to serialize once.
 
 ## `#!luau function light.send_to_all`
 
-```luau title='<!-- b:server --> <!-- b:sync -->'
+```luau title='<!-- server --> <!-- sync -->'
 function send_to_all<T>(
    message: Message<T>,
    data: T

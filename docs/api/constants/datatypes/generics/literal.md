@@ -5,7 +5,7 @@ costing zero bytes.
 
 ## `#!luau function light.literal`
 
-```luau title='<!-- b:client --> <!-- b:server --> <!-- b:shared --> <!-- b:sync -->'
+```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- sync -->'
 function literal<Value>(
     value: Value
 ): Datatype<Value>

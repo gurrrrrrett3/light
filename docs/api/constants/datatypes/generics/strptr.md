@@ -10,7 +10,7 @@ massive performance gains.
 
 ## `#!luau function light.strptr`
 
-```luau title='<!-- b:client --> <!-- b:server --> <!-- b:shared --> <!-- b:sync -->'
+```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- sync -->'
 function strptr(
     length: Datatype<number>?
 ): Datatype<string>

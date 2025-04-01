@@ -8,7 +8,7 @@ There is no size limit on light unreliable sending, however sending
 
 ## `#!luau function light.send_unreliably`
 
-```luau title='<!-- b:client --> <!-- b:sync -->'
+```luau title='<!-- client --> <!-- sync -->'
 function send_unreliably<T>(
     message: Message<T>,
     data: T
@@ -17,7 +17,7 @@ function send_unreliably<T>(
 
 ## `#!luau function light.send_unreliably`
 
-```luau title='<!-- b:server --> <!-- b:sync -->'
+```luau title='<!-- server --> <!-- sync -->'
 function send_unreliably<T>(
     message: Message<T>,
     to: Player | { Player },

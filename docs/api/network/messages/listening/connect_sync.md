@@ -14,7 +14,7 @@ large servers (or memory usage).
 
 ## `#!luau function light.connect_sync`
 
-```luau title='<!-- b:client --> <!-- b:sync --> <!-- b:errors -->'
+```luau title='<!-- client --> <!-- sync --> <!-- errors -->'
 function connect_sync<T>(
    message: Message<T>,
    callback: (T) -> ()
@@ -23,7 +23,7 @@ function connect_sync<T>(
 
 ## `#!luau function light.connect_sync`
 
-```luau title='<!-- b:server --> <!-- b:sync --> <!-- b:errors -->'
+```luau title='<!-- server --> <!-- sync --> <!-- errors -->'
 function connect_sync<T>(
    message: Message<T>,
    callback: (Player, T) -> ()

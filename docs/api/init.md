@@ -6,7 +6,7 @@ handle event queueing for you.)
 
 ## `#!luau function light.init`
 
-```luau title='<!-- b:client --> <!-- b:server --> <!-- b:shared --> <!-- b:sync -->'
+```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- sync -->'
 function init(
     manual_replication: boolean?
 ): ()

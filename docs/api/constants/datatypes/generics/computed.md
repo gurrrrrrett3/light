@@ -21,7 +21,7 @@ useful for <a href="https://en.wikipedia.org/wiki/Linked_list" target="_blank">L
 
 ## `#!luau function light.computed`
 
-```luau title='<!-- b:client --> <!-- b:server --> <!-- b:shared --> <!-- b:experimental --> <!-- b:sync -->'
+```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- experimental --> <!-- sync -->'
 function computed<Output>(
     lambda: () -> (Datatype<Output>)
 ): Datatype<Output>

@@ -5,7 +5,7 @@ callback if there was one.
 
 ## `#!luau function light.disconnect`
 
-```luau title='<!-- b:client --> <!-- b:sync -->'
+```luau title='<!-- client --> <!-- sync -->'
 function disconnect<T>(
    message: Message<T>
 ) -> (
@@ -15,7 +15,7 @@ function disconnect<T>(
 
 ## `#!luau function light.disconnect`
 
-```luau title='<!-- b:server --> <!-- b:sync -->'
+```luau title='<!-- server --> <!-- sync -->'
 function disconnect<T>(
    message: Message<T>
 ) -> (

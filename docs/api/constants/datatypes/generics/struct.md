@@ -19,7 +19,7 @@ Using the above table syntax will behave the same as the API shown below.
 
 ## `#!luau function light.struct`
 
-```luau title='<!-- b:client --> <!-- b:server --> <!-- b:shared --> <!-- b:sync -->'
+```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- sync -->'
 function struct<T>(
     map: T & { [string]: Datatype },
 ): Datatype<T>

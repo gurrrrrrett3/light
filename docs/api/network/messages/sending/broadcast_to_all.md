@@ -12,7 +12,7 @@ Broadcasting to a group of players can impact ordering in ways that [`#!luau lig
 
 ## `#!luau function light.broadcast_to_all`
 
-```luau title='<!-- b:server --> <!-- b:sync -->'
+```luau title='<!-- server --> <!-- sync -->'
 function broadcast_to_all<T>(
    message: Message<T>,
    data: T

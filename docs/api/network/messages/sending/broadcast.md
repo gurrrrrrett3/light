@@ -13,7 +13,7 @@ lower memory impact.(1)
 
 ## `#!luau function light.broadcast`
 
-```luau title='<!-- b:server --> <!-- b:sync -->'
+```luau title='<!-- server --> <!-- sync -->'
 function broadcast<T>(
     message: Message<T>,
     to: Player | { Player },

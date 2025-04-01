@@ -12,7 +12,7 @@ I.e., `#!luau { light.u8 }`
 
 ## `#!luau function light.container`
 
-```luau title='<!-- b:client --> <!-- b:shared --> <!-- b:sync --> <!-- b:async -->'
+```luau title='<!-- client --> <!-- shared --> <!-- sync --> <!-- async -->'
 function container<T>(
     message_names: T & { [string]: Datatype },
     namespace: string? --(1)!
@@ -23,7 +23,7 @@ function container<T>(
 
 ## `#!luau function light.container`
 
-```luau title='<!-- b:server --> <!-- b:sync -->'
+```luau title='<!-- server --> <!-- sync -->'
 function container<T>(
     message_names: T & { [string]: Datatype },
     namespace: string? --(1)!

@@ -11,7 +11,7 @@ list of players.
 
 ## `#!luau function light.send_to_all_except`
 
-```luau title='<!-- b:server --> <!-- b:sync -->'
+```luau title='<!-- server --> <!-- sync -->'
 function send_to_all_except<T>(
    message: Message<T>,
    exclude: Player | { Player },

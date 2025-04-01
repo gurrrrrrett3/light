@@ -2,7 +2,7 @@
 
 ## `#!luau function light.range`
 
-```luau title='<!-- b:client --> <!-- b:server --> <!-- b:shared --> <!-- b:sync -->'
+```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- sync -->'
 function range(
     minimum: number,
     maximum: number

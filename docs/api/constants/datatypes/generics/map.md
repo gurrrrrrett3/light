@@ -11,7 +11,7 @@ local some_map = { [light.str()] = light.u8 }
 
 ## `#!luau function light.map`
 
-```luau title='<!-- b:client --> <!-- b:server --> <!-- b:shared --> <!-- b:sync -->'
+```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- sync -->'
 function map<Key, Value>(
     key: Datatype<Key>,
     value: Datatype<Value>,

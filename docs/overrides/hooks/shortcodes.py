@@ -30,7 +30,7 @@ def on_page_markdown(
 
     # Find and replace all external asset URLs in current page
     return re.sub(
-        r"<!-- b:(\w+)(.*?) -->",
+        r"<!-- (\w+)(.*?) -->",
         replace, markdown, flags = re.I | re.M
     )
 

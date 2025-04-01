@@ -6,7 +6,7 @@ Consider using [`#!luau light.strptr()`](./strptr.md) instead if you serialize a
 
 ## `#!luau function light.str`
 
-```luau title='<!-- b:client --> <!-- b:server --> <!-- b:shared --> <!-- b:sync -->'
+```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- sync -->'
 function str(
     length: Datatype<number>?
 ): Datatype<string>

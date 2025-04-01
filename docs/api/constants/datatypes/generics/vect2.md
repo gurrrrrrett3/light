@@ -7,7 +7,7 @@
 
 ## `#!luau function light.vect2`
 
-```luau title='<!-- b:client --> <!-- b:server --> <!-- b:shared --> <!-- b:sync -->'
+```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- sync -->'
 function vect2(
     coord: Datatype<number>?
 ): Datatype<vector>

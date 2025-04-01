@@ -10,7 +10,7 @@ enums you will need to [typecast](https://luau.org/typecheck#type-casts) into a
 
 ## `#!luau function light.enum`
 
-```luau title='<!-- b:client --> <!-- b:server --> <!-- b:shared --> <!-- b:sync -->'
+```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- sync -->'
 function enum<Identifier>(
     identifiers: { Identifier }
 ): Datatype<Identifier>
