@@ -19,9 +19,9 @@ function map<Key, Value>(
 ): Datatype<{ [Key]: Value }>
 ```
 
-`length` will default to [`#!luau light.vlq`](../numbers/uints.md).
+`length` will default to [`#!luau light.vlq`](../../numbers/uints.md).
 
-First two arguments can be any [Datatype](../index.md). Third argument represents how the length is encoded. A couple of ways you can use
+First two arguments can be any [Datatype](../../index.md). Third argument represents how the length is encoded. A couple of ways you can use
 the optional `length` parameter:
 
 ```luau

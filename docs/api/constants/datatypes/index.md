@@ -16,8 +16,7 @@ Here's an example of one:
 
 ## Luau Tables
 
-As you'll learn in the [tables section](./generics/arr.md), a luau table can also be a valid Datatype under certain
-circumstances.
+A luau table can also be a valid Datatype under [certain circumstances](./generics/tables/index.md).
 
 ## Lying to luau
 

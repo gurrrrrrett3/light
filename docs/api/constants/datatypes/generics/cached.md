@@ -1,6 +1,6 @@
 # Cached
 
-In light, you can use luau [arrays](./arr.md), [maps](./map.md), and [structs](./struct.md)
+In light, you can use luau [arrays](./tables/arr.md), [maps](./tables/map.md), and [structs](./tables/struct.md)
 to define a message [Datatype](../index.md).
 
 This API exists to cache the result of a [Datatype](../index.md). This will internally turn it into a numeric ID if it
