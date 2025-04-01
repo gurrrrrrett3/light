@@ -214,6 +214,8 @@ nav:
           - Unknown: api/constants/datatypes/unknown.md
           - Instance: api/constants/datatypes/instance.md
       - Step Replication: api/step_replication.md
+      - Debug API:
+          - Debug: api/debug/index.md
       - Internal API:
           - api/internals/index.md
           - Datatypes:
@@ -230,8 +232,6 @@ nav:
               - Input: api/internals/io/input.md
               - Output: api/internals/io/output.md
           - Get Holy: api/internals/get_holy.md
-      - Debug API:
-          - Debug: api/debug/index.md
 
   - Performance:
       - Performance: blog/performance/index.md
