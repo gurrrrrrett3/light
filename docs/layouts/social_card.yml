@@ -22,8 +22,7 @@ definitions:
 
 size: { width: 1200, height: 630 }
 layers:
-  - size: { width: 630, height: 630 }
-    background:
+  - background:
       image: docs/assets/images/light.png
 
   - size: { width: 832, height: 310 }
