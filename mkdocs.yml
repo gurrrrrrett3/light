@@ -6,6 +6,8 @@ site_url: https://hardlyardi.github.io/light/
 repo_name: hardlyardi/light
 repo_url: https://github.com/hardlyardi/light
 
+edit_uri: edit/main/docs/
+
 theme:
   name: material
 
@@ -139,6 +141,7 @@ markdown_extensions:
 
 plugins:
   - search
+  - typeset
   - tags:
       tags_allowed:
         - Server
@@ -150,7 +153,12 @@ plugins:
         - Experimental
         - Internal
 
-  - typeset
+  - social:
+      enabled: !ENV [CI, false] # only should be built in CI
+      debug: false # doesn't apply to builds, only in testing
+
+      cards_layout_dir: docs/layouts/
+      cards_layout: social_card
 
 nav:
   - Home: index.md
