@@ -1,0 +1,8 @@
+# Rojo Sourcemap
+/sourcemap.json
+
+# Place files
+**.rbxl*
+
+# Lock files
+**.lock
