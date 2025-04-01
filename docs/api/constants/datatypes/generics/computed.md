@@ -19,11 +19,6 @@ useful for <a href="https://en.wikipedia.org/wiki/Linked_list" target="_blank">L
 
     If you pass a self-referential table, serialization may hang forever."
 
-!!! dragons "Here be dragons, thou art forewarned."
-
-    Computed datatypes are currently untested. You may run into unexpected behavior, edge cases, and more "fun" issues.
-    Use them at your own risk.
-
 ## `#!luau function light.computed`
 
 ```luau title='<!-- b:client --> <!-- b:server --> <!-- b:shared --> <!-- b:experimental --> <!-- b:sync -->'
@@ -31,25 +26,6 @@ function computed<Output>(
     lambda: () -> (Datatype<Output>)
 ): Datatype<Output>
 ```
-
-```luau
-function computed<Output>(
-    ser: (
-        writer: Writer,
-        byte_ptr: number,
-        data: any
-    ) -> (number),
-    des: (
-        writer: Writer,
-        byte_ptr: number
-    ) -> (Output, number)
-): Datatype<Output>
-```
-
-!!! info "[`#!luau light.computed()`](./computed.md) can also be called with two arguments as shown above."
-
-    You can utilize this to create a custom type, returning a number for the new buffer byte ptr. If used correctly,
-    you could use this to re-implement custom dynamic types such as [Enums](./enums.md). This feature is <!-- b:experimental -->
 
 An example <a href="https://en.wikipedia.org/wiki/Linked_list" target="_blank">LinkedList</a> [Datatype](../index.md)
 using [`#!luau light.computed()`](./computed.md) and [Cached Datatypes](./cached.md):
