@@ -1,11 +1,10 @@
 # Containers
 
-Containers are the recommended and easy way to group together messages in light by name. These function similarly to
-ByteNet's namespaces, if you're familiar.
+Containers are the recommended and easy way to group together messages in light by name.
 
 Container inputs should be a map of string message-names to any valid [Datatype](../../../constants/datatypes/index.md).
-This includes [Datatypes](../../../constants/datatypes/index.md) like arrays or maps being defined with luau tables like
-`#!luau { light.u8 }` for example.
+This includes [Datatypes](../../../constants/datatypes/index.md) like arrays or maps that are defined with luau tables.
+I.e., `#!luau { light.u8 }`
 
 !!! info "If messages inside are already synchronized beforehand, the container will not yield."
 
@@ -16,18 +15,22 @@ This includes [Datatypes](../../../constants/datatypes/index.md) like arrays or 
 ```luau title='<!-- b:client --> <!-- b:shared --> <!-- b:sync --> <!-- b:async -->'
 function container<T>(
     message_names: T & { [string]: Datatype },
-    namespace: string?
+    namespace: string? --(1)!
 ): (T)
 ```
+
+1. The "namespace" parameter exists to allow you to have multiple containers with overlapping message names.
 
 ## `#!luau function light.container`
 
 ```luau title='<!-- b:server --> <!-- b:sync -->'
 function container<T>(
     message_names: T & { [string]: Datatype },
-    namespace: string?
+    namespace: string? --(1)!
 ): (T)
 ```
+
+1. The "namespace" parameter exists to allow you to have multiple containers with overlapping message names.
 
 Some example code using containers:
 

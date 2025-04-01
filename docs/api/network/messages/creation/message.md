@@ -22,8 +22,8 @@ function message<T>(
 ```
 
 `template` in both above samples should always be any valid [Datatype](../../../constants/datatypes/index.md).
-This includes [Datatypes](../../../constants/datatypes/index.md) like arrays or maps being defined with luau tables like
-`#!luau { light.u8 }` for example.
+This includes [Datatypes](../../../constants/datatypes/index.md) like arrays or maps that are defined with luau tables.
+I.e., `#!luau { light.u8 }`
 
 If you wanted to recreate the behavior of this code:
 
