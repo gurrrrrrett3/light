@@ -9,4 +9,5 @@ Light is currently in development. The source is not public at the moment, but d
 ## Credits
 
 [alicesaidhi](https://github.com/alicesaidhi/) - Holy-Light logo
+
 [lewi](https://github.com/lewisakura/) - Helped develop docs
