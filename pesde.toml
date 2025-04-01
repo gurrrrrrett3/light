@@ -13,3 +13,7 @@ environment = "roblox"
 
 [indices]
 default = "https://github.com/pesde-pkg/index"
+
+[dev_dependencies]
+rojo_scripts = { name = "pesde/scripts_rojo", version = "^0.1.0", target = "lune" }
+rojo = { name = "pesde/rojo", version = "^7.4.4", target = "lune" }
