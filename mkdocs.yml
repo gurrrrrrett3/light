@@ -160,7 +160,6 @@ nav:
   - API Docs:
       - API Documentation: api/index.md
       - Init: api/init.md
-      - Step Replication: api/step_replication.md
       - Messages:
           - Creation:
               - container: api/network/messages/creation/container.md
@@ -205,6 +204,7 @@ nav:
           - Bool: api/constants/datatypes/bool.md
           - Unkown: api/constants/datatypes/unknown.md
           - Instance: api/constants/datatypes/instance.md
+      - Step Replication: api/step_replication.md
   - Performance:
       - Performance: blog/performance/index.md
   - Internals Blog:
