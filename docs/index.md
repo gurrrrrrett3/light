@@ -50,7 +50,7 @@ send(message_a)
 ```
 
 The other side will recieve the first call to message a, the second call to message a, and then the call(s) to message
-b.
+b. Essentially, per-event ordering.
 
 ### Q: Why only allow one callback?
 
