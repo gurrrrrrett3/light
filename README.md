@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./docs/assets/images/lightbanner.png" class="center">
+  <img src="./docs/assets/images/lightbanner.png" class="center" alt="A Networking Library, optimized silly :3">
 </div>
 
 # Holy Light
