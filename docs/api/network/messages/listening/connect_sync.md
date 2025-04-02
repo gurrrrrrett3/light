@@ -1,12 +1,14 @@
 # Connect Sync
 
+There is little to no downside of using
+[`#!luau light.connect()`](./connect.md), this function exists for optimizing frequently fired events in potentially
+large servers (or memory usage). If that's not you, you should skip this page.
+
 [`#!luau light.connect_sync()`](./connect_sync.md) does the same thing as [`#!luau light.connect()`](./connect.md)
 with one major difference. Thread reuse will not be used with [`#!luau light.connect_sync()`](./connect_sync.md), and
 the function will be called directly. This means if you yield in your callback, you could get a buffer access out of
 bounds or cause other unexpected internal issues. If you don't know what that implies, use
-[`#!luau light.connect()`](./connect.md). There is little to no downside of using
-[`#!luau light.connect()`](./connect.md), this function exists for optimizing frequently fired events in potentially
-large servers (or memory usage).
+[`#!luau light.connect()`](./connect.md).
 
 !!! tip "This function can error if there is already a callback connected."
 
