@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./docs/assets/images/light.png" class="center">
+  <img src="./docs/assets/images/lightbanner.png" class="center">
 </div>
 
 # Holy Light
