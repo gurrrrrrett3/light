@@ -1,4 +1,13 @@
-# Writer
+# Dynamic Writer
+
+!!! dragons "Here be dragons, thou art forewarned."
+    I'm aware some of the documentation in the [DynamicWriter](./index.md) &
+    [Datatypes API](../../datatypes_api/index.md) is slightly confusing at the moment. It's something that'll be
+    improved as time goes on.
+
+!!! danger "NOT to be confused with "Writer""
+    Writers are different. Writer is what you'll be dealing with if you use
+    [`#!luau light.internal.new_type()`](../../datatypes_api/new_type.md).
 
 Light exposes the ability to access its internal dynamic writers. These are wrappers/compatability for buffers. You can
 create one with

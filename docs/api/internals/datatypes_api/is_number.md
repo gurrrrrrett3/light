@@ -5,7 +5,7 @@ info.
 
 ## `#!luau function light.internal.is_number()`
 
-```luau title='<!-- internal --> <!-- client --> <!-- server --> <!-- shared --> <!-- sync -->'
+```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- sync --> <!-- internal -->'
 function is_number(
     datatype: Datatype
 ): boolean
