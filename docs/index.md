@@ -29,7 +29,7 @@ Light is similar to these, but will require some work to migrate to/from.
 - Secure your messages for you. Static serialization ensures you get the types you expect, but the data can still be manipulated by exploiters.
 
 - Provide a built-in signal implementation.
-Light messages can only be connected or disconnected with a single callback. For convenience, a thread reuse implementation is packaged out-of-the-box with [`light.connect()`](./api/network/messages/listening/connect.md)
+Light messages can only be connected or disconnected with a single callback. For convenience, a thread reuse implementation is packaged out-of-the-box with [`#!luau light.connect()`](./api/network/messages/listening/connect.md)
 [why?](#q-why-only-allow-one-callback)
 
 ## FAQ / Q&A
