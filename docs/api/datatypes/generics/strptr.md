@@ -6,7 +6,7 @@ a frame has significant performance and bandwidth gains.
 {.annotate}
 
 1. To learn more about how Light's String Pointers work, check out
-   [The Internals Blog](../../../../blog/internals/string_pointers.md) on the topic.
+   [The Internals Blog](../../../blog/internals/string_pointers.md) on the topic.
 
 ## `#!luau function light.strptr`
 
