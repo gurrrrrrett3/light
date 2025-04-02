@@ -25,11 +25,11 @@ function message<T>(
 This includes [Datatypes](../../../datatypes/index.md) like arrays or maps that are defined with luau tables.
 I.e., `#!luau { light.u8 }`
 
-If you wanted to recreate the behavior of this code:
+If you wanted to recreate the behavior of this code that uses containers:
 
 ```luau
 return light.container({
-    ping = light.literal(nil),
+    foo = { light.u8 }, -- send a table of u8 numbers
 })
 ```
 
@@ -37,6 +37,6 @@ You can do that with raw message api:
 
 ```luau
 return {
-    ping = light.message("ping", light.literal(nil))
+    foo = light.message("ping", { light.u8 })
 }
 ```

@@ -38,7 +38,7 @@ Some example code using containers:
 local light = require(ReplicatedStorage.light).shared
 
 return light.container({
-    ping = light.literal(nil),
+    foo = { light.u8 }, -- send a table of u8 numbers
 }, "some-cool-namespace")
 ```
 
