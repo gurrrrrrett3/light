@@ -25,31 +25,6 @@ layers:
   - background:
       image: docs/assets/images/lightbanner.png
 
-  - size: { width: 832, height: 310 }
-    offset: { x: 62, y: 62 }
-    typography:
-      content: *page_title
-      align: start
-      overflow: shrink
-      color: "#ffffff"
-      line:
-        amount: 3
-        height: 1.25
-      font:
-        family: Noto Serif
-        style: Bold
-
-  - size: { width: 832, height: 64 }
-    offset: { x: 64, y: 448 }
-    typography:
-      content: *page_description
-      align: start
-      overflow: shrink
-      color: "#ffffff"
-      line:
-        amount: 2
-        height: 1.5
-
   - size: { width: 32, height: 32 }
     offset: { x: 64, y: 544 }
     icon:
