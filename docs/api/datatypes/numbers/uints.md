@@ -13,3 +13,5 @@ The number you see to the right of "u" indicates how many bits each [Datatype](.
 | u48  | 6 bytes   | 0              | 2^48-1        |
 | u53  | 7 bytes   | 0              | 2^53          |
 | vlq  | 1-8 bytes | 0              | 2^49 i think. |
+
+You can access each one with `light.<Name>`.

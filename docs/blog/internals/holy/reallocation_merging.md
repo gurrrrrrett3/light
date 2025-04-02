@@ -7,7 +7,7 @@ cases to skip reallocating logic in datatypes.
 
 ## Motivation
 
-One of the biggest performance costs when it comes to serializing our events is reallocations. Pretty much every
+One of the biggest performance costs when it comes to serializing our messages is reallocations. Pretty much every
 datatype we write to a buffer has some form of reallocation. But, when we use a lot of these datatypes consecutively and
 we know how big they are beforehand, we can squash those allocations together and write a version of that datatype
 without any of the spooky logic included for reallocating. Other programs like

@@ -54,8 +54,11 @@ b.
 
 ### Q: Why only allow one callback?
 
-"Message" in Light indicates that there's an intended target. I rarely see a use multiple callbacks for events. If you do, you can make your callback spawn a BindableEvent or signal. The way I see it, there's no reason for me to include bloat like a signal in the base
-library. If you're interested in event profiling, the docs for [`#!luau light.disconnect()`](./api/network/messages/listening/disconnect.md) have a decent example of an event profiler.
+"Message" in Light indicates that there's an intended target. I rarely see a use multiple callbacks for events. If you
+do, you can make your callback spawn a BindableEvent or signal. The way I see it, there's no reason for me to include
+bloat like a signal in the base library. If you're interested in profiling, the docs for
+[`#!luau light.disconnect()`](./api/network/messages/listening/disconnect.md) have a decent example of an event
+profiler.
 
 ### Q: Where can I find holy?
 

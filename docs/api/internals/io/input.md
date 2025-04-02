@@ -1,12 +1,11 @@
 # Input
 
-## Overview
-
-[`#!luau light.input()`](./input.md) is a function which allows you to use light's internal serialization on your own buffer.
+[`#!luau light.input()`](./input.md) is a function which allows you to use light's internal serialization on your own
+[Writer](./writer/index.md).
 
 ## `#!luau function light.internal.input`
 
-```luau title='<!-- internal --> <!-- client --> <!-- server --> <!-- shared --> <!-- sync -->'
+```luau title='<!-- errors --> <!-- client --> <!-- server --> <!-- shared --> <!-- experimental --> <!-- sync --> <!-- internal -->'
 function input<T>(
     writer: DynamicWriter,
     type: Datatype<T>,
@@ -16,6 +15,10 @@ function input<T>(
 
 You'll need to provide a valid [Writer](./writer/index.md), [Datatype](../../datatypes/index.md), and some
 data to serialize. You can deserialize the data with [Output](./output.md).
+
+!!! danger "Use correct data"
+
+    If the data is incorrect, this function may error.
 
 !!! danger "The buffer may change"
 

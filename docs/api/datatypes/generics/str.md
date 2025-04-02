@@ -1,9 +1,5 @@
 # Strings
 
-## Important Notice
-
-Consider using [`#!luau light.strptr()`](./strptr.md) instead if you serialize a lot of the same "arbitrary" string.
-
 ## `#!luau function light.str`
 
 ```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- sync -->'
@@ -11,6 +7,8 @@ function str(
     length: Datatype<number>?
 ): Datatype<string>
 ```
+
+!!!tip "[`#!luau light.strptr()`](./strptr.md) can have better performance if you serialize a lot of the same "arbitrary" string."
 
 `length` will default to [`#!luau light.vlq`](../numbers/uints.md).
 

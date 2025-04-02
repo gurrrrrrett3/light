@@ -193,19 +193,20 @@ nav:
               - Signed Integers: api/datatypes/numbers/ints.md
               - Floating Points: api/datatypes/numbers/floats.md
           - Generic Datatypes:
+              - Generic Datatypes: api/datatypes/generics/index.md
               - Tables:
                   - Table Datatypes: api/datatypes/generics/tables/index.md
                   - Array: api/datatypes/generics/tables/arr.md
                   - Map: api/datatypes/generics/tables/map.md
                   - Struct: api/datatypes/generics/tables/struct.md
+              - Optional: api/datatypes/generics/optional.md
+              - String: api/datatypes/generics/str.md
+              - Range: api/datatypes/generics/range.md
               - Vect: api/datatypes/generics/vect.md
               - Vect2: api/datatypes/generics/vect2.md
               - Vector2: api/datatypes/generics/vector2.md
-              - Literal: api/datatypes/generics/literal.md
-              - Range: api/datatypes/generics/range.md
               - Enums: api/datatypes/generics/enums.md
-              - Optional: api/datatypes/generics/optional.md
-              - String: api/datatypes/generics/str.md
+              - Literal: api/datatypes/generics/literal.md
               - String Pointer: api/datatypes/generics/strptr.md
               - Cached Datatypes: api/datatypes/generics/cached.md
               - Computed: api/datatypes/generics/computed.md
@@ -218,17 +219,20 @@ nav:
           - Debug: api/debug/index.md
       - Internal API:
           - api/internals/index.md
-          - Datatypes:
-              - New Type: api/internals/datatypes/new_type.md
-              - Make Number: api/internals/datatypes/make_number.md
+          - Datatypes API:
+              - Datatypes API: api/internals/datatypes_api/index.md
+              - New Type: api/internals/datatypes_api/new_type.md
+              - Is Number: api/internals/datatypes_api/is_number.md
+              - Make Number: api/internals/datatypes_api/make_number.md
           - I/O:
               - Writer:
                   - Writer: api/internals/io/writer/index.md
                   - From Size: api/internals/io/writer/writer_from_size.md
                   - From Buff: api/internals/io/writer/writer_from_buff.md
-                  - Get Size: api/internals/io/writer/get_writer_size.md
                   - Get Buff: api/internals/io/writer/get_writer_buff.md
                   - Try Realloc: api/internals/io/writer/try_realloc.md
+                  - Set Byte Ptr: api/internals/io/writer/set_byte_ptr.md
+                  - Get Byte Ptr: api/internals/io/writer/get_byte_ptr.md
               - Input: api/internals/io/input.md
               - Output: api/internals/io/output.md
           - Get Holy: api/internals/get_holy.md
