@@ -5,7 +5,7 @@ hide:
 
 # <span style="font-family:Comic Neue; font-weight:900">:3c</span>
 
-Light is a *light*weight, secure, and modern remote wrapper for roblox. Read below, or [get started](quick-start/index.md).
+Light is a *light*weight, robust, and secure remote wrapper for roblox. Read below, or [get started](quick-start/index.md).
 
 ## What Light does
 
