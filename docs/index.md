@@ -50,7 +50,9 @@ send(message_a)
 ```
 
 The other side will recieve the first call to message a, the second call to message a, and then the call(s) to message
-b. Essentially, per-event ordering.
+b. Essentially, per-event ordering. If you use
+<a href="https://github.com/ffrostfall/ByteNet" target="_blank">ByteNet</a> or
+<a href="https://github.com/ffrostfall/BridgeNet2" target="_blank">BridgeNet2</a>, you're already experiencing this.
 
 ### Q: Why only allow one callback?
 
