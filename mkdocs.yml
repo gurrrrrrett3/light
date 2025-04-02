@@ -154,7 +154,7 @@ plugins:
         - Internal
 
   - social:
-      enabled: !ENV [CI, false] # only should be built in CI
+      enabled: false
       debug: false # doesn't apply to builds, only in testing
 
       cards_layout_dir: docs/layouts/
