@@ -27,11 +27,11 @@ export type DesFunction<T> = (
 ) -> (T, number)
 ```
 
+1. A number ptr to the current deserialization location in bytes.
+
 !!! tip "There are some pretty useful utilities for interacting with writers"
     [`#!luau light.internal.try_realloc()`](../io/writer/try_realloc.md), and
     [`#!luau light.internal.get_writer_buff()`](../io/writer/get_writer_buff.md) both work from within ser/des.
-
-1. A number ptr to the current deserialization location in bytes.
 
 Returns the decoded datatype, and the new byte ptr.
 
