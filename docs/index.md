@@ -56,9 +56,7 @@ b. Essentially, per-event ordering. If you use
 
 ### Q: Why only allow one callback?
 
-"Message" in Light indicates that there's an intended target. I rarely see a use multiple callbacks for events. If you
-do, you can make your callback spawn a BindableEvent or signal. The way I see it, there's no reason for me to include
-bloat like a signal in the base library. If you're interested in profiling, the docs for
+"Message" in Light indicates that there's an intended target. Signals are inherently bloat because you can make your callback spawn a BindableEvent or signal. Handling it this way solves a lot of edge cases. If you're interested in profiling, the docs for
 [`#!luau light.disconnect()`](./api/network/messages/listening/disconnect.md) have a decent example of an event
 profiler.
 
