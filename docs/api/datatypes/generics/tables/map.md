@@ -3,7 +3,7 @@
 Maps (a.k.a. Dictionaries) are quite simple.
 <br>Maps in light represent the luau type: `#!luau { [Key]: Value }`.
 
-You can define a valid map Datatype using a simple table, just like luau:
+You can define a valid map [Datatype](../../index.md) using a simple table, just like luau:
 
 ```luau
 local some_map = { [light.str()] = light.u8 }
