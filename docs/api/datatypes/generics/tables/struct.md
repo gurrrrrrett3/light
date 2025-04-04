@@ -12,7 +12,7 @@ You can define a valid struct [Datatype](../../index.md) using a simple table, j
 local some_struct = {
     foo_field = light.u8,
     bar_field = light.i16,
-    bar_field = light.str()
+    baz_field = light.str()
 }
 ```
 
