@@ -174,10 +174,10 @@ nav:
               - message: api/network/messages/creation/message.md
           - Sending:
               - send: api/network/messages/sending/send.md
-              - send_unreliably: api/network/messages/sending/send_unreliably.md
               - broadcast: api/network/messages/sending/broadcast.md
               - broadcast_to_all: api/network/messages/sending/broadcast_to_all.md
               - broadcast_to_all_except: api/network/messages/sending/broadcast_to_all_except.md
+              - send_unreliably: api/network/messages/sending/send_unreliably.md
               - broadcast_unreliably: api/network/messages/sending/broadcast_unreliably.md
               - broadcast_unreliably_to_all: api/network/messages/sending/broadcast_unreliably_to_all.md
               - broadcast_unreliably_to_all_except: api/network/messages/sending/broadcast_unreliably_to_all_except.md
