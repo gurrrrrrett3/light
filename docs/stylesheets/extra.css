@@ -5,10 +5,10 @@
 
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
-    fill:currentcolor;
-    display:block;
-    height:2rem;
-    width:auto
+    fill: currentcolor;
+    display: block;
+    height: 2rem;
+    width: auto
 }
 
 /* recoloring */
@@ -18,13 +18,14 @@
 }
 
 :root {
-    --md-primary-fg-color: #e4c84f;
+    --md-primary-fg-color: #4f5be4;
+    --md-default-bg-color: #ffa32c;
     --md-accent-fg-color: #ffa32c;
 
     --md-accent-fg-color--transparent: #f3b94d1a;
 
-    --md-primary-fg-color--light: #e4c84f;
-    --md-primary-fg-color--dark: #e4c84f;
+    --md-primary-fg-color--light: #4f5be4;
+    --md-primary-fg-color--dark: #4f5be4;
 }
 
 :root,
@@ -51,7 +52,7 @@
 [data-md-color-scheme="slate"] {
     --md-default-fg-color: #ffffff !important;
     --fg-color: 255, 255, 255;
-    
+
     .md-tag.md-tag:hover,
     .md-tag.md-tag {
         position: relative;
@@ -100,7 +101,7 @@
     font-family: "Noto Serif", serif;
 }
 
-.md-header__topic + .md-header__topic {
+.md-header__topic+.md-header__topic {
     font-weight: 600;
 }
 
@@ -119,8 +120,8 @@ h6 {
 /* codeblock corners */
 
 .highlight span.filename {
-    border-top-left-radius:.55rem;
-    border-top-right-radius:.55rem;
+    border-top-left-radius: .55rem;
+    border-top-right-radius: .55rem;
 }
 
 /* dragons admonition */
@@ -136,8 +137,8 @@ h6 {
     border-color: #ff1744;
 }
 
-.md-typeset .dragons > .admonition-title,
-.md-typeset .dragons > summary {
+.md-typeset .dragons>.admonition-title,
+.md-typeset .dragons>summary {
     background-color: #ff17441a;
 
     &::before {
@@ -152,8 +153,8 @@ h6 {
     border-color: #00bfa5;
 }
 
-.md-typeset .workshop > .admonition-title,
-.md-typeset .workshop > summary {
+.md-typeset .workshop>.admonition-title,
+.md-typeset .workshop>summary {
     background-color: #00bfa51a;
 
     &::before {
@@ -201,9 +202,9 @@ h6 {
 
 .md-tag.md-tag:hover {
     cursor: pointer;
-    
+
     transition: 0.3s !important;
-    -webkit-box-shadow:0px 0px 80px 4.5px var(--md-tag-color);
+    -webkit-box-shadow: 0px 0px 80px 4.5px var(--md-tag-color);
     -moz-box-shadow: 0px 0px 80px 4.5px var(--md-tag-color);
     box-shadow: 0px 0px 80px 4.5px var(--md-tag-color);
 }
