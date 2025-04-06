@@ -8,7 +8,7 @@ function buff(
 ): Datatype<buffer>
 ```
 
-`length` will default to [`#!luau light.vlq`](../numbers/uints.md).
+`length` will default to [`#!luau light.vlq()`](./vlq.md).
 
 First argument represents how the length is encoded. A couple of ways you can use the optional `length` parameter:
 

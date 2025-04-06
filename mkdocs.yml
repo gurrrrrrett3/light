@@ -200,13 +200,14 @@ nav:
                   - Struct: api/datatypes/generics/tables/struct.md
               - Optional: api/datatypes/generics/optional.md
               - String: api/datatypes/generics/str.md
+              - VLQ: api/datatypes/generics/vlq.md
               - Range: api/datatypes/generics/range.md
               - Vect: api/datatypes/generics/vect.md
               - Vect2: api/datatypes/generics/vect2.md
               - Vector2: api/datatypes/generics/vector2.md
               - Enums: api/datatypes/generics/enums.md
               - Literal: api/datatypes/generics/literal.md
-              - String Pointer: api/datatypes/generics/strptr.md
+              - Intern String: api/datatypes/generics/internstr.md
               - Cached Datatypes: api/datatypes/generics/cached.md
               - Computed: api/datatypes/generics/computed.md
               - Buffer: api/datatypes/generics/buff.md
@@ -249,5 +250,5 @@ nav:
       - Unreliable Fragmentation: blog/internals/unreliable_fragmentation.md
       - Replication Batch: blog/internals/replication_batch.md
       - Dynamic Streams: blog/internals/dynamic_streams.md
-      - String Pointers: blog/internals/string_pointers.md
+      - Intern Strings: blog/internals/intern_strings.md
       - Bitpacks: blog/internals/bitpacks.md

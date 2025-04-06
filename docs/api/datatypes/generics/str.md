@@ -8,9 +8,9 @@ function str(
 ): Datatype<string>
 ```
 
-!!!tip "[`#!luau light.strptr()`](./strptr.md) can have better performance if you serialize a lot of the same "arbitrary" string."
+!!!tip "[`#!luau light.internstr()`](./internstr.md) can be better for some use-cases."
 
-`length` will default to [`#!luau light.vlq`](../numbers/uints.md).
+`length` will default to [`#!luau light.vlq`](./vlq.md).
 
 First argument represents how the length is encoded. A couple of ways you can use the optional `length` parameter:
 

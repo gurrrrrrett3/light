@@ -12,6 +12,6 @@ bits each [Datatype](../index.md) takes up.
 | u40  | 5 bytes   | 0              | 2^40-1        |
 | u48  | 6 bytes   | 0              | 2^48-1        |
 | u53  | 7 bytes   | 0              | 2^53          |
-| vlq  | 1-8 bytes | 0              | 2^49 i think. |
 
 You can access each one with `light.<Name>`.
+For a variable length quantity, visit [`#!luau light.vlq()`](../generics/vlq.md)

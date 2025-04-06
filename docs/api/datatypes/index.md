@@ -6,7 +6,7 @@ Light has lots of Datatypes you can define to use in messages.
 These Datatypes usually come in the form of numeric IDs under the hood, with some casual lying to luau.
 Here's an example of one:
 
-[`#!luau local u8 = light.u8`](./numbers/uints),
+[`#!luau local u8 = light.u8`](./numbers/uints.md),
 
 `u8` can be understood by splitting up its name:
 
@@ -29,4 +29,4 @@ luau's old type solver.
 Clamping numbers or values to be within a certain range of values allows us to save a lot of bandwidth and performance, since we
 send the number directly as binary over the network. If we don't say what type something is beforehand, the network has
 to include the type of the packet in the packet, which isn't efficient. When you use
-[`#!luau unknown`](./unknown) in light, you lose the benefits of static serialization.
+[`#!luau unknown`](./unknown.md) in light, you lose the benefits of static serialization.

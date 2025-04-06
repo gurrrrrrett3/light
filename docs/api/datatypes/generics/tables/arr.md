@@ -23,7 +23,7 @@ function arr<Item>(
 ): Datatype<{T}>
 ```
 
-`length` will default to [`#!luau light.vlq`](../../numbers/uints.md).
+`length` will default to [`#!luau light.vlq(3)`](../vlq.md).
 
 First argument can be any [Datatype](../../index.md). Second argument represents how the length is encoded. A couple of
 ways you can use the optional `length` parameter:
