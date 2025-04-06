@@ -1,22 +1,17 @@
 # Broadcast
 
-Broadcasting is very similar to [`#!luau light.send()`](./send.md) with a few key differences. The biggest of which is
-that broadcast can **only** be run on the server. Broadcasting to a group of players can also impact ordering in ways
-that [`#!luau light.send()`](./send.md) will not. [`#!luau light.broadcast()`](./broadcast.md) also typically has a
-lower memory impact.(1)
-{.annotate}
+[`#!luau light.broadcast()`](./broadcast.md) will send a message to a list of players on the server.
 
-1. Light "broadcasts" can save on memory by writing data to a single stream and sending it to all players instead of
-    writing to a single stream and copying it to each player. This process is done through stream queries internally. To
-    learn more about how Light dynamically groups streams for broadcasting, check out
-    [The Internals Blog](../../../../blog/internals/dynamic_streams.md) on the topic.
+!!!tip "Sending to individual players"
+
+    To send to an individual, check out [`#!luau light.send()`](./send.md)
 
 ## `#!luau function light.broadcast`
 
 ```luau title='<!-- server --> <!-- sync -->'
 function broadcast<T>(
     message: Message<T>,
-    to: Player | { Player },
+    to: { Player },
     data: T
 )
 ```

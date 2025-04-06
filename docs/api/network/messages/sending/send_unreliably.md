@@ -1,10 +1,10 @@
 # Send Unreliably
 
-Identical behavior to [`#!luau light.send()`](./send.md), except the event is
+Identical behavior to [`#!luau light.send()`](./send.md), except the message is
 <a href="https://create.roblox.com/docs/reference/engine/classes/UnreliableRemoteEvent" target="_blank">unreliable</a>.
 There is no size limit on light unreliable sending, however sending
 [instances](../../../datatypes/instance.md) /
-[unknowns](../../../datatypes/unknown.md) can cause it to fail.
+[unknowns](../../../datatypes/unknown.md) can cause it to exceed size thresholds and fail to send.
 
 ## `#!luau function light.send_unreliably`
 
@@ -15,12 +15,17 @@ function send_unreliably<T>(
 ): ()
 ```
 
+!!! tip "Sending messages to multiple people"
+
+    To send unreliable messages to multiple people on the server, check out
+    [`#!luau light.broadcast_unreliably()`](./broadcast_unreliably.md).
+
 ## `#!luau function light.send_unreliably`
 
 ```luau title='<!-- server --> <!-- sync -->'
 function send_unreliably<T>(
     message: Message<T>,
-    to: Player | { Player },
+    to: Player,
     data: T
 ): ()
 ```
