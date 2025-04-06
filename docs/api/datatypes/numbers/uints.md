@@ -1,7 +1,7 @@
 # Unsigned Integers
 
-An integer being "unsigned" says that it does not have a sign, so it should not be negative.
-The number you see to the right of "u" indicates how many bits each [Datatype](../index.md) takes up.
+An integer being "unsigned" means it should not be negative. The number you see to the right of "u" indicates how many
+bits each [Datatype](../index.md) takes up.
 
 | Name | Size      | Minimum Int    | Maximum Int   |
 | ---: | :-------- | -------------- | ------------- |
