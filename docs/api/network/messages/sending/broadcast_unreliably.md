@@ -2,7 +2,7 @@
 
 Identical behavior to [`#!luau light.broadcast()`](./broadcast.md), except the message is
 <a href="https://create.roblox.com/docs/reference/engine/classes/UnreliableRemoteEvent" target="_blank">unreliable</a>.
-There is no size limit on light unreliable sending; However, sending
+There is no size limit on light unreliable sending &mdash; however, sending
 [instances](../../../datatypes/instance.md) /
 [unknowns](../../../datatypes/unknown.md) can cause it to exceed size thresholds and fail to send.
 
