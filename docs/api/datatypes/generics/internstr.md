@@ -9,7 +9,7 @@ repeating the same "arbitrary" string multiple times in a frame has significant 
 
 ## `#!luau function light.internstr`
 
-```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- sync -->'
+```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- sync --> <!-- experimental -->'
 function internstr(
     length: Datatype<number>?
 ): Datatype<string>
