@@ -8,8 +8,6 @@ function str(
 ): Datatype<string>
 ```
 
-!!!tip "[`#!luau light.internstr()`](./internstr.md) can be better for some use-cases."
-
 `length` will default to [`#!luau light.vlq`](./vlq.md).
 
 First argument represents how the length is encoded. A couple of ways you can use the optional `length` parameter:
