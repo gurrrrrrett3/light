@@ -11,6 +11,6 @@ function vect(
 ): Datatype<vector>
 ```
 
-The `coord` parameter defines how each coordinate of [`#!luau light.vect()`] will be encoded. If left unselected, it
+The `coord` parameter defines how each coordinate of [`#!luau light.vect()`](./vect.md) will be encoded. If left unselected, it
 will choose [`float32`](../numbers/floats.md) by default. Luau cannot represent floats beyond'
 [`f32`](../numbers/floats.md) in vectors, so using a [`f64`](../numbers/floats.md) for this would be wasteful.
