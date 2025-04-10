@@ -207,7 +207,6 @@ nav:
               - Roblox Vect2: api/datatypes/generics/roblox_vect2.md
               - Enums: api/datatypes/generics/enums.md
               - Literal: api/datatypes/generics/literal.md
-              - Intern String: api/datatypes/generics/internstr.md
               - Cached Datatypes: api/datatypes/generics/cached.md
               - Computed: api/datatypes/generics/computed.md
               - Buffer: api/datatypes/generics/buff.md

@@ -1,6 +1,11 @@
 # Light's Intern Strings
 
-[Intern Strings](../../api/datatypes/generics/internstr.md) are a relatively simple & lightweight datatype. They
+!!!info "Discontinued"
+
+    Intern strings have been discontinued in light. They may be revisited later, but for now are not included in the
+    library.
+
+Intern Strings are a relatively simple & lightweight datatype. They
 serve to save resources on serialization/deserialization of repeated "arbitrary" strings. This is done by holding onto
 an optional intern string "index" for each [stream](./dynamic_streams.md). This looks something like:
 
