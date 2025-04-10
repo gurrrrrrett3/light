@@ -204,7 +204,7 @@ nav:
               - Range: api/datatypes/generics/range.md
               - Vect: api/datatypes/generics/vect.md
               - Vect2: api/datatypes/generics/vect2.md
-              - Vector2: api/datatypes/generics/vector2.md
+              - Roblox Vect2: api/datatypes/generics/roblox_vect2.md
               - Enums: api/datatypes/generics/enums.md
               - Literal: api/datatypes/generics/literal.md
               - Intern String: api/datatypes/generics/internstr.md

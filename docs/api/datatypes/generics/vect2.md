@@ -2,7 +2,7 @@
 
 [`#!luau light.vect2()`](./vect2.md) is a 2-wide constructed
 <a href="https://luau.org/typecheck#builtin-types" target="_blank">luau `vector`</a>
-[Datatype](../index.md). This is not to be confused with [`#!luau light.vector2()`](./vector2.md), the Roblox
+[Datatype](../index.md). This is not to be confused with [`#!luau light.roblox_vect2()`](./roblox_vect2.md), the Roblox
 [Datatype](../index.md).
 
 ## `#!luau function light.vect2`
