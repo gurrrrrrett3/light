@@ -202,7 +202,7 @@ nav:
               - String: api/datatypes/generics/str.md
               - VLQ: api/datatypes/generics/vlq.md
               - Range: api/datatypes/generics/range.md
-              - Vect: api/datatypes/generics/vect.md
+              - Vect3: api/datatypes/generics/vect3.md
               - Vect2: api/datatypes/generics/vect2.md
               - Roblox Vect2: api/datatypes/generics/roblox_vect2.md
               - Enums: api/datatypes/generics/enums.md
