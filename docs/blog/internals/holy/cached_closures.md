@@ -15,8 +15,8 @@ functions which take in [Datatype(s)](../../../api/datatypes/index.md) and retur
 
 ```luau
 local vect3_shape_cache = {} :: { [Shape<any>]: Shape<any> } --(1)!
-local function vect3(xyz_shape: Shape<number>?): Shape<vector>
-    local coord_shape = xyz_shape or f32
+local function vect3(coord_shape: Shape<number>?): Shape<vector>
+    local coord_shape = coord_shape or f32
     if not number_types_map[coord_shape] then
         error(debug.traceback("holy.vector must take in a number"))
     end
