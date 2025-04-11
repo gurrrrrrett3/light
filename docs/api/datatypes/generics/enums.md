@@ -106,7 +106,7 @@ local vfx = light.enum("kind"::"kind", {
             assets:WaitForChild("explosion_big"),
         }),
         magnitude = light.u16,
-        position = light.vect(light.f32),
+        position = light.vect3(light.f32),
     },
     scream = {
         magnitude = light.u16,

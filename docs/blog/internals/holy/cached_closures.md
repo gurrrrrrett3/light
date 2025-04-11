@@ -6,7 +6,7 @@ Caching closures is a basic optimization
 to work with "generic" [Datatypes](../../../api/datatypes/index.md).(1) It works generally by storing an
 "input" index based on parameters, and saving the result shape ID. This caching system is important to make sure memory
 usage stays low (by not creating new serialization/deserialization functions), and to prevent ser/de IDs from getting
-out of hand in size. As an example, here's the [vect caching](../../../api/datatypes/generics/vect.md)
+out of hand in size. As an example, here's the [vect3 caching](../../../api/datatypes/generics/vect3.md) src:
 {.annotate}
 
 1. Generic [Datatypes](../../../api/datatypes/index.md) are
@@ -15,7 +15,7 @@ functions which take in [Datatype(s)](../../../api/datatypes/index.md) and retur
 
 ```luau
 local vect3_shape_cache = {} :: { [Shape<any>]: Shape<any> } --(1)!
-local function vect(xyz_shape: Shape<number>?): Shape<vector>
+local function vect3(xyz_shape: Shape<number>?): Shape<vector>
     local coord_shape = xyz_shape or f32
     if not number_types_map[coord_shape] then
         error(debug.traceback("holy.vector must take in a number"))
