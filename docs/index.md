@@ -55,7 +55,7 @@ b. Essentially, per-event ordering. If you use
 
 ### Q: Why only allow one callback?
 
-"Message" in Light indicates that there's an intended target. Signals are inherently bloat because you can make your callback spawn a BindableEvent or signal. Handling it this way solves a lot of edge cases. If you're interested in profiling, the docs for
+"Message" in Light indicates that there's an intended target or consumer, so the message does care about its callback. Handling it this way solves a lot of edge cases. To make an event, you could always make a wrapper yourself which pipes the message into a signal implementation. If you're interested in profiling, the docs for
 [`#!luau light.disconnect()`](./api/network/messages/listening/disconnect.md) have a decent example of an event
 profiler.
 
