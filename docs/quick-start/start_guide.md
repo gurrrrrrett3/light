@@ -55,7 +55,7 @@ light.send(messages.ping)
 
 ## Listening For Messages on The Server
 
-Now, we need somewhere to listen for this message. The way to listen for a message being fired is with
+Now, we need somewhere to listen for this message. The way to listen for a message being sent is with
 [`#!luau light.connect(message, callback)`](../api/network/messages/listening/connect.md)
 
 ```luau title="ServerScriptService.server (Script)"

@@ -1,6 +1,6 @@
 # Connect
 
-Connect sets a callback for a given message when it is fired. A message can only have one connection, but you can always
+Connect sets a callback for a given message when it is sent. A message can only have one connection, but you can always
 connect your messages into a choice signal implementation. Callbacks can be removed with
 [`#!luau light.disconnect()`](./disconnect.md). Message callbacks will be spawned asynchronously with thread reuse, to
 create a non-yielding callback you can use [`#!luau light.connect_sync()`](./connect_sync.md)

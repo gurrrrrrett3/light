@@ -12,7 +12,7 @@ people from one another.
 
 ## A Simple Scenario
 
-Here's somewhere we want to fire some data to a couple of our players.
+We want to send some data to a couple of our players.
 
 ```luau
 send({plr1, plr2}, 1234)
@@ -55,10 +55,9 @@ send_buffers = {         | write
 ```
 
 When we step replication, each player will get their respective buffer as-is. Each player got their messages in order as
-expected. This copying behavior is essentially what [Blink](https://github.com/1Axen/blink) does, and what you'll get
-when you use [`#!luau light.send*`](../../api/network/messages/sending/send.md) with multiple players on the server.
-However, copying can grow costly for your memory usage and add some real overhead when you continue to do it for a large
-number (or all) of your players.
+expected. This copying behavior is essentially what [Blink](https://github.com/1Axen/blink) does. However, copying can
+grow costly for your memory usage and add some real overhead when you continue to do it for a large number (or all) of
+your players.
 
 ## A Smarter Way
 
@@ -82,9 +81,9 @@ send_buffers = {
 
 Notice how {plr1, plr2} gets a buffer to be written to. We base the lookup for each stream based on its composition of
 player records, meaning any event sent to plr1 **and** plr2 will be written to a single buffer. These groups need to be
-created when you fire to them the first time, and can add a bit of overhead there. For the fruits of our labor, when we
-step replication, instead of sending each player exclusively one buffer, we simply send a list of them, saving tons of
-memory:
+created when you send a message to that group for the first time, and can add a bit of overhead there. For the fruits of
+our labor, when we step replication, instead of sending each player exclusively one buffer, we simply send a list of
+them, saving tons of memory:
 
 ```luau title="batch.luau"
 local player_send_batches = {}
@@ -107,7 +106,7 @@ end
 ```
 
 This creates the same ordering discrepancy as bytenet, but on a larger scale. Ordering of a message is only guaranteed
-per-stream, and streams are grouped based on who they were fired to. In practice, this has little impact on how you
+per-stream, and streams are grouped based on who they were sending to. In practice, this has little impact on how you
 develop. But, if it's an issue you can always use `#!luau light.send()` and utilize the copying behavior anyways.
 
 ### Queries
