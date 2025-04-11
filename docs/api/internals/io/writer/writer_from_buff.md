@@ -8,4 +8,4 @@ function writer_from_buff(
 ): DynamicWriter
 ```
 
-Returns a valid [Writer](./index.md) from a buffer.
+Returns a valid [DynamicWriter](./index.md) from a buffer.

@@ -221,19 +221,21 @@ nav:
           - Datatypes API:
               - Datatypes API: api/internals/datatypes_api/index.md
               - New Type: api/internals/datatypes_api/new_type.md
-              - Is Number: api/internals/datatypes_api/is_number.md
               - Make Number: api/internals/datatypes_api/make_number.md
+              - Make Nilable: api/internals/datatypes_api/make_nilable.md
+              - Is Number: api/internals/datatypes_api/is_number.md
+              - Is Nilable: api/internals/datatypes_api/is_nilable.md
           - I/O:
+              - Input: api/internals/io/input.md
+              - Output: api/internals/io/output.md
               - Writer:
-                  - Writer: api/internals/io/writer/index.md
+                  - DynamicWriter: api/internals/io/writer/index.md
                   - From Size: api/internals/io/writer/writer_from_size.md
                   - From Buff: api/internals/io/writer/writer_from_buff.md
                   - Get Buff: api/internals/io/writer/get_writer_buff.md
                   - Try Realloc: api/internals/io/writer/try_realloc.md
                   - Set Byte Ptr: api/internals/io/writer/set_byte_ptr.md
                   - Get Byte Ptr: api/internals/io/writer/get_byte_ptr.md
-              - Input: api/internals/io/input.md
-              - Output: api/internals/io/output.md
           - Get Holy: api/internals/get_holy.md
 
   - Performance:

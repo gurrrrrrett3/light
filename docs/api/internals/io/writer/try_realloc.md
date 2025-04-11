@@ -4,12 +4,12 @@
 
 ```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- experimental --> <!-- sync --> <!-- internal -->'
 function try_realloc(
-    writer: Writer | DynamicWriter,
+    writer: DynamicWriter | HolyWriter,
     target_ptr: number
 )
 ```
 
-Will make sure the Writer has the amount of space specified.
+Will make sure the Writer has the amount of space specified, resizing if necessary.
 
 !!! danger "The buffer may change"
 

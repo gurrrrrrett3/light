@@ -4,13 +4,8 @@
 
 ```luau title=' <!-- client --> <!-- server --> <!-- shared --> <!-- sync --> <!-- internal -->'
 function get_writer_buff(
-    writer: Writer | DynamicWriter
+    writer: DynamicWriter | HolyWriter
 ): buffer
 ```
 
-Requires a valid [DynamicWriter](./index.md) or Writer, returns its buffer.
-
-!!! tip
-
-    <!-- experimental --> You can do the same thing by indexing `writer[1]`. This is **not recommended** and the
-    behavior could break in future updates.
+Requires a valid [DynamicWriter](./index.md) or HolyWriter, returns its buffer.

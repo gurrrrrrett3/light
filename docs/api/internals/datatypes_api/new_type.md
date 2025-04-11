@@ -9,7 +9,7 @@ custom logic.
 
 ```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- experimental --> <!-- internal -->'
 export type SerFunction<T> = (
-    writer: Writer,
+    writer: HolyWriter,
     byte_ptr: number --(1)!,
     value: T
 ) -> (number) --(2)!
@@ -22,7 +22,7 @@ export type SerFunction<T> = (
 
 ```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- experimental --> <!-- internal -->'
 export type DesFunction<T> = (
-    writer: Writer,
+    writer: HolyWriter,
     byte_ptr: number --(1)!
 ) -> (T, number)
 ```
@@ -31,7 +31,7 @@ export type DesFunction<T> = (
 
 !!! tip "There are some pretty useful utilities for interacting with writers"
     [`#!luau light.internal.try_realloc()`](../io/writer/try_realloc.md), and
-    [`#!luau light.internal.get_writer_buff()`](../io/writer/get_writer_buff.md) both work from within ser/des.
+    [`#!luau light.internal.get_writer_buff()`](../io/writer/get_writer_buff.md) both work with `HolyWriter`.
 
 Returns the decoded datatype, and the new byte ptr.
 
@@ -58,6 +58,6 @@ function new_type<T>(
 ```
 
 You can define a static serialization function with this overload. `static_size` represents the number of bytes that
-this datatype takes up / should allocate. This enables certain optimizations on your custom datatype.(1)
+this datatype takes up / should allocate. This enables certain optimizations on your custom datatype.
 `static_ser` here should NOT [allocate](../io/writer/try_realloc.md) to the Writer. Allocation in static functions is
 handled by the caller. You should still increment `byte_ptr`.

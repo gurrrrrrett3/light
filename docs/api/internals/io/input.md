@@ -1,7 +1,7 @@
 # Input
 
 [`#!luau light.input()`](./input.md) is a function which allows you to use light's internal serialization on your own
-[Writer](./writer/index.md).
+[DynamicWriter](./writer/index.md).
 
 ## `#!luau function light.internal.input`
 

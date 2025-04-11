@@ -4,7 +4,7 @@ Allows you to register a datatype as a number.
 
 ## `#!luau function light.internal.make_number()`
 
-```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- sync --> <!-- internal -->'
+```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- experimental --> <!-- sync --> <!-- internal -->'
 function make_number(
     datatype: Datatype<number>
 )

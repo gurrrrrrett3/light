@@ -8,4 +8,4 @@ function writer_from_size(
 ): DynamicWriter
 ```
 
-Allocates a buffer and returns a valid [Writer](./index.md) from a size.
+Allocates a buffer and returns a valid [DynamicWriter](./index.md) from a size.

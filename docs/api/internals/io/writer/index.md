@@ -5,9 +5,9 @@
     [Datatypes API](../../datatypes_api/index.md) is slightly confusing at the moment. It's something that'll be
     improved as time goes on.
 
-!!! danger "NOT to be confused with "Writer""
-    Writers are different. Writer is what you'll be dealing with if you use
-    [`#!luau light.internal.new_type()`](../../datatypes_api/new_type.md).
+!!! danger "NOT to be confused with `HolyWriter`"
+    `HolyWriter` is different. `HolyWriter` is what you'll be dealing with if you use
+    [Datatypes API](../../datatypes_api/index.md).
 
 Light exposes the ability to access its internal dynamic writers. These are wrappers/compatability for buffers. You can
 create one with
