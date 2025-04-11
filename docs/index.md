@@ -74,5 +74,5 @@ already. These tools have contributed and continue to contribute to The Roblox N
 possible without time and work from a lot of awesome people. I'd also like to personally thank the people below, as well
 as anyone else who contributes to light:
 
-- <a href="https://github.com/alicesaidhi/" target="_blank">Alice</a>: Holy-Light Icon + Helped with legacy bitpack constant lookup table
+- <a href="https://github.com/alicesaidhi/" target="_blank">Alice</a>: Holy-Light Icon
 - <a href="https://github.com/lewisakura/" target="_blank">Lewi</a>: Helped develop docs :pray:
