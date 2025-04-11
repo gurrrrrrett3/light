@@ -1,5 +1,6 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-for _, test_module in ReplicatedStorage:WaitForChild("test"):WaitForChild("cases"):GetChildren() do
-	(require)(test_module)
-end
+local light = require(ReplicatedStorage.light).client
+local messages = require(ReplicatedStorage.shared.messages)
+
+light.send(messages.to_server.void)
