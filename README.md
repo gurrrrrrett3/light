@@ -9,6 +9,7 @@
 ## Get Started
 
 Light is currently in development. The full source is not public at the moment, but documentation is available [here](https://light.ardi.gg/).
+<br>If you like Light or find it interesting, consider leaving a ⭐ to save it for later, or watching the repository.
 
 ## Credits
 
