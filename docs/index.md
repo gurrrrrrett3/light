@@ -6,6 +6,7 @@ hide:
 # <span style="font-family:Comic Neue; font-weight:900">:3c</span>
 
 Light is a *light*weight, robust, and secure remote wrapper for roblox. Read below, or [get started](quick-start/index.md).
+<br>If you like Light or find it interesting, consider [leaving a ⭐](https://github.com/hardlyardi/light) to save it for later, or watching the repository.
 
 ## What Light does
 
@@ -55,7 +56,7 @@ b. Essentially, per-event ordering. If you use
 
 ### Q: Why only allow one callback?
 
-"Message" in Light indicates that there's an intended target. Signals are inherently bloat because you can make your callback spawn a BindableEvent or signal. Handling it this way solves a lot of edge cases. If you're interested in profiling, the docs for
+"Message" in Light indicates that there's an intended target or consumer, so the message does care about its callback. Handling it this way solves a lot of edge cases. To make an event, you could always make a wrapper yourself which pipes the message into a signal implementation. If you're interested in profiling, the docs for
 [`#!luau light.disconnect()`](./api/network/messages/listening/disconnect.md) have a decent example of an event
 profiler.
 
@@ -74,5 +75,5 @@ already. These tools have contributed and continue to contribute to The Roblox N
 possible without time and work from a lot of awesome people. I'd also like to personally thank the people below, as well
 as anyone else who contributes to light:
 
-- <a href="https://github.com/alicesaidhi/" target="_blank">Alice</a>: Holy-Light Icon + Helped with legacy bitpack constant lookup table
+- <a href="https://github.com/alicesaidhi/" target="_blank">Alice</a>: Holy-Light Icon
 - <a href="https://github.com/lewisakura/" target="_blank">Lewi</a>: Helped develop docs :pray:

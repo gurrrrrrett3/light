@@ -36,5 +36,5 @@ This part of the API is considered experimental for now, and may change or be re
 ### <!-- internal -->
 
 The internals of Light are exposed in `light.internal` and the [internal section](./internals/index.md) of the docs. However, they should never be necessities for ordinary users.
-Instead, they are present for "power users", people developing "extensions", "add-ons", or light itself. Internal APIs are subject
+Instead, they are present for "power users", people developing wrappers, or people developing light itself. Internal APIs are subject
 to more frequent breaking changes.
