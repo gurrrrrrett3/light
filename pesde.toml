@@ -1,6 +1,6 @@
 name = "hardlyardi/light"
 version = "0.1.0"
-description = "A remote event wrapper for roblox"
+description = "A remote event wrapper for Roblox"
 authors = ["hardlyardi"]
 repository = "https://github.com/hardlyardi/light"
 license = "MIT"
