@@ -41,8 +41,8 @@ No. Roblox does batching on its own, light does batching to group messages toget
 
 ### Q: Is event order the same as roblox?
 
-No. Messages will be ordered per-message. This means that in an environment where you send 2 kinds of messages, you may
-end up with 2 contiguous lists of calls for each type.
+No. Messages will be ordered per-message-name. This means that if you send 2 kinds of messages in a frame, you may
+end up with 2 contiguous lists of calls for each type:
 
 ```luau
 send(message_a)

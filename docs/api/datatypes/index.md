@@ -24,9 +24,9 @@ Generally, places where you see `#!luau Datatype<T>` in these docs, you will onl
 editor / LSP. This is to avoid needing to use type functions for every function, which would break compatability with
 luau's old type solver.
 
-## Why use Datatypes like this?
+## Why use Datatypes?
 
-Clamping numbers or values to be within a certain range of values allows us to save a lot of bandwidth and performance, since we
-send the number directly as binary over the network. If we don't say what type something is beforehand, the network has
+Clamping numbers or values to be within a certain range of values allows us to validate type safety, save a lot of bandwidth, and gain performance, since we
+send the data directly as binary over the network. If we don't say what type something is beforehand, the network has
 to include the type of the packet in the packet, which isn't efficient. When you use
 [`#!luau unknown`](./unknown.md) in light, you lose the benefits of static serialization.
