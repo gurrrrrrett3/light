@@ -38,10 +38,10 @@ Returns the decoded datatype, and the new byte ptr.
 ## `#!luau function light.internal.new_type()`
 
 ```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- experimental --> <!-- sync --> <!-- internal -->'
-function new_type<T>(
-    ser: SerFunction,
-    des: DesFunction
-): Datatype
+function new_type<Input>(
+    ser: SerFunction<Input>,
+    des: DesFunction<Input>
+): Datatype<Input>
 ```
 
 You can define a new type with serialization and deserialization here.
@@ -49,12 +49,12 @@ You can define a new type with serialization and deserialization here.
 ## `#!luau function light.internal.new_type()`
 
 ```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- experimental --> <!-- sync --> <!-- internal -->'
-function new_type<T>(
+function new_type<Input>(
     static_size: number,
-    static_ser: SerFunction,
-    ser: SerFunction,
-    des: DesFunction
-): Datatype
+    static_ser: SerFunction<Input>,
+    ser: SerFunction<Input>,
+    des: DesFunction<Input>
+): Datatype<Input>
 ```
 
 You can define a static serialization function with this overload. `static_size` represents the number of bytes that
