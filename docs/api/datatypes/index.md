@@ -29,4 +29,4 @@ luau's old type solver.
 Clamping numbers or values to be within a certain range of values allows us to validate type safety, save a lot of bandwidth, and gain performance, since we
 send the data directly as binary over the network. If we don't say what type something is beforehand, the network has
 to include the type of the packet in the packet, which isn't efficient. When you use
-[`#!luau unknown`](./unknown.md) in light, you lose the benefits of static serialization.
+[`#!luau any`](./any.md) in light, you lose the benefits of static serialization.

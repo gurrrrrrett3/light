@@ -7,19 +7,19 @@ useful for <a href="https://en.wikipedia.org/wiki/Linked_list" target="_blank">L
 
 !!! danger "Introducing external conditionality to serialization / deserialization can be dangerous. Please be careful."
 
-!!! danger "You should never yield from within [`#!luau light.computed()`](./computed.md)'s lambda callback(s)."
+!!! danger "You should never yield from within [`#!luau datatypes.computed()`](./computed.md)'s lambda callback(s)."
 
     This is considered undefined behavior.
 
-!!! danger "You should never send any message from within [`#!luau light.computed()`](./computed.md)'s lambda callback(s)."
+!!! danger "You should never send any message from within [`#!luau datatypes.computed()`](./computed.md)'s lambda callback(s)."
 
     This is considered undefined behavior.
 
-!!! danger "[`#!luau light.computed()`](./computed.md) allows for recursive types."
+!!! danger "[`#!luau datatypes.computed()`](./computed.md) allows for recursive types."
 
     If you pass a self-referential table, serialization may hang forever.
 
-## `#!luau function light.computed`
+## `#!luau function light.datatypes.computed`
 
 ```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- experimental --> <!-- sync -->'
 function computed<Output>(
@@ -28,15 +28,17 @@ function computed<Output>(
 ```
 
 An example <a href="https://en.wikipedia.org/wiki/Linked_list" target="_blank">LinkedList</a> [Datatype](../index.md)
-using [`#!luau light.computed()`](./computed.md) and [Cached Datatypes](./cached.md):
+using [`#!luau datatypes.computed()`](./computed.md) and [Cached Datatypes](./cached.md):
 
 ```luau title="linked_list.luau"
+local ty = light.datatypes
+
 -- as a word of warning, you probably shouldn't give this a `head` field.
 local function linkedlist<T>(value: Datatype<T>)
     local Datatype
 
-    Datatype = light.cached {
-        next = light.optional(light.computed(function()
+    Datatype = ty.cached {
+        next = ty.optional(ty.computed(function()
             return Datatype
         end)),
         

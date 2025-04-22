@@ -1,6 +1,6 @@
 # Buffers
 
-## `#!luau function light.buff`
+## `#!luau function light.datatypes.buff`
 
 ```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- sync -->'
 function buff(
@@ -8,18 +8,20 @@ function buff(
 ): Datatype<buffer>
 ```
 
-`length` will default to [`#!luau light.vlq()`](./vlq.md).
+`length` will default to [`#!luau datatypes.vlq()`](./vlq.md).
 
 First argument represents how the length is encoded. A couple of ways you can use the optional `length` parameter:
 
 ```luau
-local some_buff = light.buff( light.u8 ) -- Buffer between 0-255 bytes
+local types = light.datatypes
+
+local some_buff = types.buff( types.u8 ) -- Buffer between 0-255 bytes
 ```
 
 ```luau
-local some_buff = light.buff( light.range(0, 50) ) -- Buffer should be between 0 and 50 bytes.
+local some_buff = types.buff( types.range(0, 50) ) -- Buffer should be between 0 and 50 bytes.
 ```
 
 ```luau
-local some_buff = light.buff( light.literal(3) ) -- A buffer with 3 bytes.
+local some_buff = types.buff( types.literal(3) ) -- A buffer with 3 bytes.
 ```

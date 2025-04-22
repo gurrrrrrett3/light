@@ -167,7 +167,7 @@ nav:
       - Beginner's Guide: quick-start/start_guide.md
   - API Docs:
       - API Documentation: api/index.md
-      - Init: api/init.md
+      - Begin Replication: api/begin_replication.md
       - Messages:
           - Creation:
               - container: api/network/messages/creation/container.md
@@ -211,8 +211,9 @@ nav:
               - Computed: api/datatypes/generics/computed.md
               - Buffer: api/datatypes/generics/buff.md
           - Bool: api/datatypes/bool.md
-          - Unknown: api/datatypes/unknown.md
-          - Instance: api/datatypes/instance.md
+          - Any: api/datatypes/any.md
+          - Instances: api/datatypes/instances.md
+          - Checked: api/datatypes/checked.md
       - Step Replication: api/step_replication.md
       - Debug API:
           - Debug: api/debug/index.md

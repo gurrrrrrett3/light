@@ -12,4 +12,4 @@ The number you see to the right of "i" indicates how many bits each [Datatype](.
 | i40  | 5 bytes | -2^39          | 2^39-1        |
 | i48  | 6 bytes | -2^47          | 2^47-1        |
 
-You can access each one with `light.<Name>`.
+You can access each one with `light.datatypes.<Name>`.

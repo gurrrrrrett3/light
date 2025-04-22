@@ -18,7 +18,7 @@ local some_struct = {
 
 Using the above table syntax will behave the same as the API shown below.
 
-## `#!luau function light.struct`
+## `#!luau function light.datatypes.struct`
 
 ```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- sync -->'
 function struct<T>(

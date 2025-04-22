@@ -14,7 +14,7 @@ local some_array = { light.u8 }
 
 Using the above table syntax will behave the same as the API shown below.
 
-## `#!luau function light.arr`
+## `#!luau function light.datatypes.arr`
 
 ```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- sync -->'
 function arr<Item>(
@@ -23,19 +23,21 @@ function arr<Item>(
 ): Datatype<{T}>
 ```
 
-`length` will default to [`#!luau light.vlq(3)`](../vlq.md).
+`length` will default to [`#!luau datatypes.vlq(3)`](../vlq.md).
 
 First argument can be any [Datatype](../../index.md). Second argument represents how the length is encoded. A couple of
 ways you can use the optional `length` parameter:
 
 ```luau
-local some_arr = light.arr( light.u8, light.range(0, 50) ) -- Array should have between 0 and 50 items.
+local types = light.datatypes
+
+local some_arr = types.arr( types.u8, types.range(0, 50) ) -- Array should have between 0 and 50 items.
 ```
 
 ```luau
-local some_arr = light.arr( light.u8, light.literal(3) ) -- Array will always have three items.
+local some_arr = types.arr( types.u8, types.literal(3) ) -- Array will always have three items.
 ```
 
 ```luau
-local some_arr = light.arr( light.u8, light.u8 ) -- between 0-255 items.
+local some_arr = types.arr( types.u8, types.u8 ) -- between 0-255 items.
 ```

@@ -9,7 +9,7 @@ You can define a valid map [Datatype](../../index.md) using a simple table, just
 local some_map = { [light.str()] = light.u8 }
 ```
 
-## `#!luau function light.map`
+## `#!luau function light.datatypes.map`
 
 ```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- sync -->'
 function map<Key, Value>(
@@ -25,13 +25,15 @@ First two arguments can be any [Datatype](../../index.md). Third argument repres
 the optional `length` parameter:
 
 ```luau
-local some_map = light.map( light.str(), light.u8, light.u8 ) -- between 0-255 keys.
+local types = light.datatypes
+
+local some_map = types.map( types.str(), types.u8, types.u8 ) -- between 0-255 keys.
 ```
 
 ```luau
-local some_map = light.map( light.str(), light.u8, light.range(0, 50) ) -- Map should have between 0 and 50 keys.
+local some_map = types.map( types.str(), types.u8, types.range(0, 50) ) -- Map should have between 0 and 50 keys.
 ```
 
 ```luau
-local some_map = light.map( light.str(), light.u8, light.literal(3) ) -- Map will always have three keys.
+local some_map = types.map( types.str(), types.u8, types.literal(3) ) -- Map will always have three keys.
 ```

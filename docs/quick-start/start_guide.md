@@ -22,11 +22,13 @@ The recommended way to create messages in light is with a simple ModuleScript.
 ```luau title="ReplicatedStorage.messages (ModuleScript)"
 local light = require(ReplicatedStorage.light).shared
 
+local types = light.datatypes
+
 local container = light.container({
-    ping = light.literal(nil),
+    ping = types.literal(nil),
 }, "messages")
 
-light.init()
+light.begin_replication()
 
 return container
 ```
@@ -34,10 +36,11 @@ return container
 [`#!luau light.container(messages)`](../api/network/messages/creation/container.md) constructs a "list" of
 messages from the table provided so the messages can be used. The second parameter you see is the "namespace", which you
 shouldn't have to worry too much about.
-[`#!luau light.literal(nil)`](../api/datatypes/generics/literal.md) means that the message doesn't
-contain any data, because it is literally `#!luau nil`. [`#!luau light.init()`](../api/init.md) can be called at any time, but it's best
-to get it out of the way. This will initialize roblox RemoteEvent connections, start stepping replication, etc. Calling
-[`#!luau light.init()`](../api/init.md) multiple times will have no additional impact.
+[`#!luau types.literal(nil)`](../api/datatypes/generics/literal.md) means that the message doesn't
+contain any data, because it is literally `#!luau nil`.
+[`#!luau light.begin_replication()`](../api/begin_replication.md) can be called at any time, but it's best to get it out
+of the way. You'll need to call it to start sending messages on the client or server. Calling multiple times or from
+multiple files has no additional effects, and is considered "safe".
 
 ## Sending Messages from Client to Server
 
