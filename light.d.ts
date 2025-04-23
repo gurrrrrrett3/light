@@ -290,7 +290,6 @@ export namespace light {
 }
 
 // util types JUST for enum
-
 type TaggedEnum<Tag extends string, IdentifierMap extends Record<string, any>> = {
     [K in keyof IdentifierMap]: IdentifierMap[K] extends Record<string, any>
     ? IdentifierMap[K] & { [P in Tag]: K }
@@ -476,10 +475,6 @@ type datatypes = {
         length?: number
     ) => buffer
 
-}
-
-type Datatype<T> = number & {
-    ___light_type: T
 }
 
 // commented out instances which do not have available types in roblox-ts
