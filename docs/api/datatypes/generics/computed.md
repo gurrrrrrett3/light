@@ -19,6 +19,11 @@ useful for <a href="https://en.wikipedia.org/wiki/Linked_list" target="_blank">L
 
     If you pass a self-referential table, serialization may hang forever.
 
+!!! danger "No implicit declarations"
+
+    [Returning](https://en.wikipedia.org/wiki/Return_statement) implicit [declarations](https://en.wikipedia.org/wiki/Declaration_(computer_programming)), [such](https://www.merriam-webster.com/dictionary/such) as [Table Syntax](./tables/index.md) will not [work](https://www.bonesafety.com/products/road-work-ahead-rus). You must [returnin](https://en.wikipedia.org/wiki/Return_statement) an
+    explicitly defined [Datatype](../index.md)
+
 ## `#!luau function light.datatypes.computed`
 
 ```luau title='<!-- client --> <!-- server --> <!-- shared --> <!-- experimental --> <!-- sync -->'
