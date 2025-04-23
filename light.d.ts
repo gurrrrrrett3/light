@@ -291,9 +291,6 @@ export namespace light {
 
 // util types JUST for enum
 
-type AssertIsTable<T> = T extends Record<string, any> ? T : never;
-type AssertIsSingleton<T> = T extends string ? T : never;
-
 type TaggedEnum<Tag extends string, IdentifierMap extends Record<string, any>> = {
     [K in keyof IdentifierMap]: IdentifierMap[K] extends Record<string, any>
     ? IdentifierMap[K] & { [P in Tag]: K }
