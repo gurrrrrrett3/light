@@ -1,6 +1,5 @@
 export namespace light {
 
-
     export namespace client {
         /**
         * This function will initialize light's core functions. You'll need to call it to start sending messages on the client or server. Calling multiple times or from multiple files has no additional effects, and is considered "safe".
@@ -290,6 +289,18 @@ export namespace light {
 
 }
 
+// util types JUST for enum
+
+type AssertIsTable<T> = T extends Record<string, any> ? T : never;
+type AssertIsSingleton<T> = T extends string ? T : never;
+
+type TaggedEnum<Tag extends string, IdentifierMap extends Record<string, any>> = {
+    [K in keyof IdentifierMap]: IdentifierMap[K] extends Record<string, any>
+    ? IdentifierMap[K] & { [P in Tag]: K }
+    : never;
+}[keyof IdentifierMap];
+
+
 /**
  * https://light.ardi.gg/api/datatypes/
  */
@@ -416,10 +427,10 @@ type datatypes = {
     enum: (<Identifier>(
         identifiers: Identifier[],
     ) => Identifier)
-    & (<IdentifierName extends string, Identifier, T>(
+    & (<IdentifierName extends string, IdentifierMap extends Record<string, any>>(
         tag_name: IdentifierName & string,
-        datatypes: Map<Identifier, T>,
-    ) => T & Map<IdentifierName, Identifier>)
+        datatypes: IdentifierMap,
+    ) => TaggedEnum<IdentifierName, IdentifierMap>)
 
     /**
      * Literals represent a value which is "literally" something. Pass in any valid luau value, and it'll be seen as a constant costing zero bytes.
@@ -442,7 +453,7 @@ type datatypes = {
     ) => T
 
     /**
-     * Computed Datatypes are similar to {@link light.shared.datatypes.literal()} and {@link light.shared.datatypes.enum()}, except they are a function which returns a [Datatype](https://light.ardi.gg/api/datatypes/). They are mostly useful for [LinkedList](https://en.wikipedia.org/wiki/Linked_list), and are best paired with [Cached Datatypes](https://light.ardi.gg/api/datatypes/generics/cached/).
+     * [Computed Datatypes](https://light.ardi.gg/api/datatypes/generics/computed/) are similar to {@link light.shared.datatypes.literal()} and {@link light.shared.datatypes.enum()}, except they are a function which returns a [Datatype](https://light.ardi.gg/api/datatypes/). They are mostly useful for [LinkedList](https://en.wikipedia.org/wiki/Linked_list), and are best paired with [Cached Datatypes](https://light.ardi.gg/api/datatypes/generics/cached/).
      * ### Introducing external conditionality to serialization / deserialization can be dangerous. Please be careful.
      * ### You should never yield from within `datatypes.computed()`'s lambda callback(s).
      * This is considered undefined behavior.
@@ -991,3 +1002,5 @@ type instances = {
     WeldConstraint: WeldConstraint
     Wire: Wire
 }
+
+export default light;
